@@ -1,12 +1,16 @@
+import Layout from '../../components/Layout';
 import './style.css';
 
 import React from 'react'
 
 const Home = () => {
   return (
-    <div className='HomeArea'>Home
-    <h1>LuisLuii</h1>    
+    <div>
+        <Layout>
+            <h1>Pagina home</h1>
+        </Layout>
     </div>
+  
   )
 }
 
