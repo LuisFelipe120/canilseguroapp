@@ -1,17 +1,41 @@
 import Layout from '../../components/Layout';
 import './style.css';
+import CachorroBanner from './../../assets/images/close-de-um-border-collie-em-um-campo-ofegante-sob-a-luz-do-sol_181624-30059.jpg'
+import CriadorBanner from './../../assets/images/mulher-adotando-caes-escolha-dificil_628849-155.jpg'
 
 import React from 'react'
 
 const Home = () => {
   return (
     <div>
-        <Layout>
-            <h1>Pagina home</h1>
-        </Layout>
-    </div>
-  
-  )
+     <Layout>
+      <div className='homeArea'>
+        <section className='tenhaCanil'>
+              <div className='tituloArea'>
+                <h1>Tenha um cachorro de Raça</h1>
+              </div>
+              <div className='subTituloArea'>
+                <h2>Seja um criador responsável e legalizado</h2>
+              </div>
+              <div className='ImagemArea'>
+                <img src={CachorroBanner}/>
+              </div>
+          </section>
+          <section className='criador'>
+              <div className='tituloArea'>
+                <h1>Tenha um cachorro de Raça</h1>
+              </div>
+              <div className='subTituloArea'>
+                <h2>Seja um criador responsável e legalizado</h2>
+              </div>
+              <div className='ImagemArea'>
+                <img src={CriadorBanner}/>
+              </div>
+          </section>
+          </div>
+      </Layout>
+   </div>
+      );
 }
 
 export default Home

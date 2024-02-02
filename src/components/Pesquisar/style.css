@@ -1,0 +1,7 @@
+.barraDePesquisar{
+    border: solid 2px #0065a1;
+    border-radius: 7px;
+    font-size: 20px;
+    font-weight: 400;
+    width: 50%;
+}
