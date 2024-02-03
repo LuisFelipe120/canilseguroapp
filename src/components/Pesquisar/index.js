@@ -1,14 +1,16 @@
 import React, {useState} from 'react'
 import './style.css'
+import {FaSearch} from 'react-icons/fa';
 const Pesquisar = () => {
 
-    const [valordabusca, setValorDaBusca] = React.useState()
   return (
-    <search>
-        <input  className="barraDePesquisar" type="text" placeholder="Pesquise sua cidade" onChange={(event) => {
-    setValorDaBusca(event.target.value);
-   }} />
-    </search>
+  <div className='pesquisarLayout'>
+      <div className='iconPesquisar'>
+      <FaSearch/>
+      </div>
+      <input  className='search' type="text" placeholder="Pesquise sua cidade" />
+   
+  </div>
   )
 }
 

@@ -1,15 +1,15 @@
 import React from 'react'
 import './style.css'
 import Logo from './../../assets/images/isolado-feliz-sorridente-cao-fundo-branco-retrato-4.jpg'
-import NavBar from '../NavBar'
 import Pesquisar from '../Pesquisar'
 const Header = () => {
   return (
-        <div className='MenuNavegacao' >
-            <div className='menuHamburger' >
+    <div className='conteudo'>
+            <div className='menuHamburguer' >
+                <h1>Luis</h1>
             </div>
             <div className='logoConteiner'>
-                <img className='logo' src={Logo} />
+                <img src={Logo} />
             </div>
             <div className='cidade' >
                 <Pesquisar/>
@@ -18,6 +18,7 @@ const Header = () => {
                 <button className='botaoLogin'>
                     Login
                 </button>
+                
             </div>
         </div>
     )

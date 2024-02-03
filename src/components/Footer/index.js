@@ -4,23 +4,28 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 const Footer = () => {
   return (
 <div className='FooterArea'>
-    <div className='SobreCanilArea'>
+    <div className='linkFooterArea'>
+    <div className='linkArea'>
         <p>
-            Sobre o Canil Seguro
+            <a href='#'>Sobre o Canil Seguro</a>
         </p>
     </div>  
-    <div className='linkCBKC'>
+    <div className='linkArea'>
         <p>
-            Confederação Brasileira de Cinifolia
+           <a href='#'>Confederação Brasileira de Cinifolia</a> 
         </p>
     </div>  
+    </div>
+   
     <div className='redesSocias'>
-    <FaFacebook /> 
-    <FaInstagram /> 
-    <FaTwitter /> 
-
+    
+    
+    
+    <a href='#'><div className='IconeRedes'><FaFacebook /></div> </a>
+    <a href='#'><div className='IconeRedes'><FaInstagram /> </div></a>
+    <a href='#'><div className='IconeRedes'><FaTwitter /> </div></a>
     </div>
-    </div>
+</div>
   )
 }
 
