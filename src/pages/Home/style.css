@@ -1,0 +1,93 @@
+.title {
+    box-sizing: border-box;
+    width: 570px;
+    height: 84px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    color: #0065a1;
+}
+
+.city {
+    box-sizing: border-box;
+    width: 570px;
+    height: 59px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    font-size: 29px;
+    text-align: center;
+    justify-content: center;
+    color: #0033A1;
+    padding-top: 12px;
+}
+
+.contact {
+    box-sizing: border-box;
+    width: 570px;
+    height: 59px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    font-size: 29px;
+    text-align: center;
+    justify-content: center;
+    color: #0033A1;
+    padding-top: 12px;
+}
+
+.link {
+    box-sizing: border-box;
+    width: 570px;
+    height: 59px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    font-size: 29px;
+    text-align: center;
+    justify-content: center;
+    color: #0033A1;
+    padding-top: 12px;
+
+}
+
+.link:hover{
+    color: red;
+}
+
+.text {
+    box-sizing: border-box;
+    width: 570px;
+    height: 109px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    font-size: 27px;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    padding-top: 8px;
+
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+img {
+    box-sizing: border-box;
+    width: 570px;
+    height: 310px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    font-size: 29px;
+    text-align: center;
+    justify-content: center;
+}
+
