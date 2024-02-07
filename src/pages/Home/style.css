@@ -48,7 +48,7 @@
     justify-content: center;
     color: #0033A1;
     padding-top: 12px;
-
+    padding-right: 50px;
 }
 
 .link:hover{
@@ -67,7 +67,6 @@
     justify-content: center;
     color: black;
     padding-top: 8px;
-
 }
 
 .box {
@@ -77,6 +76,7 @@
     flex-direction: column;
     padding-left: 50px;
     padding-top: 30px;
+    
 }
 
 img {
@@ -89,5 +89,79 @@ img {
     font-size: 29px;
     text-align: center;
     justify-content: center;
+    
 }
 
+.inb {
+    padding-right: 383px;
+    padding-left: 18px;
+    padding-top: 7px;
+    box-sizing: border-box;
+    width: 570px;
+    height: 65px;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 35px;
+}
+
+
+.favory {
+    padding-left: 15px;
+    padding-top: 1px;
+    border-style: solid; 
+    border-width: 2px;
+    border-color: black;
+    color: #0065a1;
+}
+
+.avali {
+    box-sizing: border-box;
+    width: 570px;
+    height: 59px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    font-size: 29px;
+    text-align: center;
+    justify-content: center;
+    color: #0033A1;
+    padding-top: 12px;
+}
+
+#bord {
+    box-sizing: border-box;
+    width: 570px;
+    height: 400px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    font-size: 29px;
+    text-align: center;
+    justify-content: center;
+    color: #0033A1;
+    padding-left: 40px;
+    padding-top: 30px;
+}
+
+.bord {
+    padding-right: 480px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+}
+
+#avali {
+    box-sizing: border-box;
+    width: 460px;
+    height: 59px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    font-size: 29px;
+    text-align: center;
+    justify-content: center;
+    color: #0033A1;
+    padding-top: 12px;
+}
