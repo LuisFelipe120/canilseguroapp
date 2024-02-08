@@ -131,30 +131,31 @@ img {
 #bord {
     box-sizing: border-box;
     width: 570px;
-    height: 400px;
+    height: 454px;
     border-width: 2px;
     border-style: solid;
     border-color: black;
-    font-size: 29px;
     text-align: center;
     justify-content: center;
     color: #0033A1;
-    padding-left: 40px;
+    padding-left: 38px;
+    padding-right: 39px;
     padding-top: 30px;
 }
 
 .bord {
-    padding-right: 480px;
     border-width: 2px;
     border-color: black;
     border-style: solid;
-    width: 100px;
-    height: 100px;
+    height: 222px;
+    padding-left: 20px; 
+    padding-top: 18px;
+
 }
 
 #avali {
     box-sizing: border-box;
-    width: 460px;
+    width: 445px;
     height: 59px;
     border-width: 2px;
     border-style: solid;
@@ -164,4 +165,19 @@ img {
     justify-content: center;
     color: #0033A1;
     padding-top: 12px;
+    
+}
+
+.userInput {
+    border-color: black;
+    width: 490px;
+    height: 150px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.linha {
+    border-style: solid;
+    border-color: black;
+    width: 100%;
 }
