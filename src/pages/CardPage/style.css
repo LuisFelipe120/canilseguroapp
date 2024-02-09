@@ -1,0 +1,55 @@
+.bordaArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.CardArea {
+    width: 70%;
+    border: solid 2px #d7d7d7;
+    border-radius: 10px;
+    margin: 10px;
+
+}
+
+.InformacoesArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.TituloCanil h1 {
+    color: #0065a1;
+    font-size: 35;
+    font-weight: 600;
+    padding: 40px;
+}
+
+.InformacaoCanil {
+    color: #0033A1;
+    font-size: 18;
+    font-weight: 200;
+    padding: 5px;
+}
+
+.textoAreaCanil p {
+    font-size: 25px;
+    font-weight: 400px;
+    padding: 15px;
+}
+
+.TituloAvaliacao {
+    color: #0065a1;
+    font-size: 35;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.ComponenteAvaliacaoArea {
+    height: 40px;
+    padding: 15px;
+}

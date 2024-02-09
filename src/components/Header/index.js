@@ -2,11 +2,14 @@ import React from 'react'
 import './style.css'
 import Logo from './../../assets/images/isolado-feliz-sorridente-cao-fundo-branco-retrato-4.jpg'
 import Pesquisar from '../Pesquisar'
+import { FaUser } from 'react-icons/fa';
+import NavBar from '../NavBar';
+
 const Header = () => {
   return (
     <div className='conteudo'>
             <div className='menuHamburguer' >
-                <h1>Luis</h1>
+            <NavBar/>
             </div>
             <div className='logoConteiner'>
                 <img src={Logo} />
@@ -15,8 +18,9 @@ const Header = () => {
                 <Pesquisar/>
             </div>
             <div className='login' >
+                
                 <button className='botaoLogin'>
-                    Login
+                <FaUser style={{color:'WHITE', paddingRight:'10px', fontSize:'30px', paddingTop:'10px',}}/> Login
                 </button>
                 
             </div>
