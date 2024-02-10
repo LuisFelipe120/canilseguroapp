@@ -78,16 +78,26 @@ img {
 }
 
 .inb {
-    padding-right: 383px;
-    padding-left: 18px;
-    padding-top: 7px;
-    width: 570px;
-    font-size: 35px;
+    padding: 5px;
+    border: 2px black solid;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
 }
 
+.box1 {
+    height: 30px;
+    width: 200px;
+    font-size: 30px;
+}
+
+.box2 img {
+    height: 30px;
+    width: 30px;
+}
 
 .favory {
-    padding-left: 15px;
+    padding-left: 10px;
     padding-top: 1px;
     color: #0065a1;
 }
@@ -171,7 +181,6 @@ img {
  
 .rating input {
   display: none;
-  
 }
  
 .rating label {
@@ -196,3 +205,25 @@ img {
 .rating:not(:checked) label:hover ~ label {
   color: #f90;
 }
+
+#favorite-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-left: 250px;
+    border: 2px solid black;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-image: url('../../assets/images/favorite_Vazio.png'); 
+  }
+   
+   
+.star {
+    background-color: #f90;
+  }
+   
+  #favorite:checked + .star {
+    background-image: url('../../assets/images/favorite_Cheio.png'); /* Substitua pelo caminho da sua imagem de estrela preenchida */
+  }

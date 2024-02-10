@@ -1,6 +1,7 @@
 import './style.css';
 import Dog from '../../assets/images/Dog.png'
 import dog from '../../assets/images/Dogin.png'
+import Vazio from '../../assets/images/favorite_Vazio.png'
 import React from 'react';
 
 const CardDetalhes = () => {
@@ -22,10 +23,18 @@ const CardDetalhes = () => {
             <br/>
             <img src={Dog}/>
             <br/>
-            <img src={dog}/>
+              <img src={dog}/>
             <br/>
             <div className='inb'>
-              <p className='favory'>Favoritos</p>
+
+                <div className='box1'>
+                  <p>Favoritos</p>
+                </div>
+                
+                <div className='box2'>
+                  <img src={Vazio}></img>
+                </div>
+ 
             </div>
             <br/>
             <p className='avali'>Avaliações Geral</p>
