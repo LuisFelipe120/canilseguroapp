@@ -4,6 +4,7 @@ import Logo from './../../assets/images/isolado-feliz-sorridente-cao-fundo-branc
 import Pesquisar from '../Pesquisar'
 import { FaUser } from 'react-icons/fa';
 import NavBar from '../NavBar';
+import { Home } from '@mui/icons-material';
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
             <NavBar/>
             </div>
             <div className='logoConteiner'>
-                <img src={Logo} />
+               <a href='/'><img  src={Logo} /></a> 
             </div>
             <div className='cidade' >
                 <Pesquisar/>
@@ -20,7 +21,9 @@ const Header = () => {
             <div className='login' >
                 
                 <button className='botaoLogin'>
+                    <a href='#'>
                 <FaUser style={{color:'WHITE', paddingRight:'10px', fontSize:'30px', paddingTop:'10px',}}/> Login
+                </a>
                 </button>
                 
             </div>

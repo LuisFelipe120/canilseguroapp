@@ -33,10 +33,10 @@ const NavBar = () => {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Minha conta</MenuItem>
-        <MenuItem onClick={handleClose}>Documento Pedigree</MenuItem>
-        <MenuItem onClick={handleClose}>Kennel Club</MenuItem>
-        <MenuItem onClick={handleClose}>Tenha um cachorro de raça</MenuItem>
+        <MenuItem onClick={handleClose}><a href='#' style={{textDecoration:'none', color:'#0065a1'}}>Minha conta</a></MenuItem>
+        <MenuItem onClick={handleClose}><a href='#' style={{textDecoration:'none', color:'#0065a1'}}> Documento Pedigree</a></MenuItem>
+        <MenuItem onClick={handleClose}><a href='#' style={{textDecoration:'none', color:'#0065a1'}} >Kennel Club</a></MenuItem>
+        <MenuItem onClick={handleClose}><a href='/' style={{textDecoration:'none', color:'#0065a1'}} >Tenha um cachorro de raça</a></MenuItem>
       </Menu>
     </div>
   );

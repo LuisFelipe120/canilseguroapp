@@ -1,3 +1,4 @@
+
 import Layout from '../../components/Layout';
 import './style.css';
 import CachorroBanner from './../../assets/images/close-de-um-border-collie-em-um-campo-ofegante-sob-a-luz-do-sol_181624-30059.jpg'
@@ -10,6 +11,7 @@ const Home = () => {
     <div>
      <Layout>
       <div className='homeArea'>
+        <a href='/CardPage'>
         <section className='tenhaCanil'>
               <div className='tituloArea'>
                 <h1>Tenha um cachorro de Raça</h1>
@@ -21,6 +23,8 @@ const Home = () => {
                 <img src={CachorroBanner}/>
               </div>
           </section>
+          </a>
+          <a href='#'>
           <section className='criador'>
               <div className='tituloArea'>
                 <h1>Tenha um cachorro de Raça</h1>
@@ -32,7 +36,9 @@ const Home = () => {
                 <img src={CriadorBanner}/>
               </div>
           </section>
+          </a>
           </div>
+        
       </Layout>
    </div>
       );

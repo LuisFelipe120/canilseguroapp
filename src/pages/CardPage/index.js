@@ -9,9 +9,12 @@ const CardPage = () => {
       <Layout>
         <div className='bordaArea'>
         <section className='CardArea'>
+
           <div className='InformacoesArea'>
             <div className='TituloCanil'>
+            <a href='#'>
               <h1>Canil CollieEsporte</h1>
+            </a>
             </div>
             <div className='InformacaoCanil'>
               <h3>Presidente Prudente</h3>
@@ -28,7 +31,7 @@ const CardPage = () => {
                 </p>
               </div>
               <div className='TituloAvaliacao'>
-                <h1>Avaliações geral</h1>
+                <h1>Avaliações Gerais</h1>
               </div>
               <div className='ComponenteAvaliacaoArea'>
                 <Avaliacao/>
@@ -36,11 +39,14 @@ const CardPage = () => {
             </div>
 
         </section>
+
         <section className='CardArea'> 
           <div className='InformacoesArea'>
           <div className='TituloCanil'>
-            <h1>Canil CaneCorsoOficial</h1>
-          </div>
+            <a href='#'>
+              <h1>Canil CaneCorsoOficial</h1>
+            </a>
+            </div>
           <div className='InformacaoCanil'>
             <h3>Presidente Prudente</h3>
           </div>
@@ -52,12 +58,12 @@ const CardPage = () => {
             </div>
             <div className='textoAreaCanil'>
               <p>
-                O canil Cane Corso Oficial, é um canil de raça pura, que preaza qualidade e saúde da raça Cane Corso, afiliado a CBKC
+                O canil Cane Corso Oficial, é um canil de raça pura, que preza qualidade e saúde da raça Cane Corso, afiliado a CBKC
               </p>
             </div>
             <div>
               <div className='TituloAvaliacao'>
-              <h1>Avaliações geral</h1>
+              <h1>Avaliações Gerais</h1>
               </div>
               <div className='ComponenteAvaliacaoArea'>
                 <Avaliacao/>
