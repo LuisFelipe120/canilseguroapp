@@ -4,6 +4,7 @@ import DocPack from './pages/DocPack';
 import Home from './pages/Home';
 import KennelClub from './pages/KennelClub';
 import CardDetalhes from './pages/CardDetalhes';
+import CardCanilDetalhes from './pages/CardCanilDetalhes';
 
 
 function App() {
@@ -28,6 +29,12 @@ function App() {
       
       <Route path='/CardDetalhes' element= {
         <CardDetalhes />
+      }>
+
+      </Route>
+
+      <Route path='/CaneCorso' element= {
+         <CardCanilDetalhes/>
       }>
 
       </Route>
