@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import CardPage from './pages/CardPage';
+import CadastroUsuario from './pages/CadastroUsuario';
 import MinhaConta from './pages/MinhaConta';
 
 function App() {
@@ -19,8 +20,11 @@ function App() {
       <Route path='/minhaconta' element={
         <MinhaConta/>
       }>
+              </Route>
 
-      </Route>
+      <Route path='/CadastroUsuario' element={
+        <CadastroUsuario/>
+      }></Route>
    </Routes>
   );
 }

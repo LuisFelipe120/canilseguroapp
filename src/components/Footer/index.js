@@ -12,7 +12,7 @@ const Footer = () => {
     </div>  
     <div className='linkArea'>
         <p>
-           <a href='#'>Confederação Brasileira de Cinifolia</a> 
+           <a href='https://cbkc.org/'>Confederação Brasileira de Cinifolia</a> 
         </p>
     </div>  
     </div>

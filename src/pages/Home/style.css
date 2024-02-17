@@ -9,7 +9,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+
 }
+.tenhaCanil:hover{
+    transform: scale(0.9);
+    
+}
+
 
 .tituloArea, .subTituloArea, .ImagemArea{
     flex: 1;
