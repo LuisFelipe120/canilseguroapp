@@ -2,6 +2,7 @@ import './style.css';
 import Adulto from '../../assets/images/AdultoCaneCorso.png'
 import Filhote from '../../assets/images/FilhoteCaneCorso.png'
 import Vazio from '../../assets/images/favorite_Vazio.png'
+import User from '../../assets/images/face_scan.png'
 import React from 'react';
 
 const CardCanilDetalhes = () => {
@@ -23,7 +24,7 @@ const CardCanilDetalhes = () => {
             <br/>
             <img src={Adulto}/>
             <br/>
-              <img src={Filhote}/>
+            <img src={Filhote}/>
             <br/>
             <div className='inb'>
 
@@ -37,8 +38,11 @@ const CardCanilDetalhes = () => {
  
             </div>
             <br/>
-            <p className='avali'>Avaliações Geral</p>
+            <div className='geralAvali'>
+              <p className='avali'>Avaliações Geral</p>
+              <img src={User}></img>
 
+            </div>
             <br/>
             <div id='bord'>
               <div className='bord'>

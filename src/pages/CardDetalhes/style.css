@@ -66,7 +66,7 @@
     
 }
 
-img {
+.img {
     box-sizing: border-box;
     width: 570px;
     height: 310px;
@@ -102,6 +102,24 @@ img {
 .box2 img {
     height: 30px;
     width: 30px;
+}
+
+.geralAvali img {
+    align-items: center;
+    justify-content: center;
+}
+
+.estrelas input[type=radio] {
+    display: none;
+}
+  
+.estrelas label i.fa:before {
+    content: '\\f005';
+    color: blue; /* Altere a cor aqui */
+}
+  
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+    color: blue; /* Altere a cor aqui também */
 }
 
 .avali {
