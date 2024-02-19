@@ -1,0 +1,71 @@
+*
+{
+    background-color: lightgrey;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.loginArea
+{
+   margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    font-size: 20px;  
+}
+
+#emailArea
+{
+    margin-top: 150px;
+    margin-left: 700px;
+}
+
+#inputEmail
+{
+    height: 4vh;
+    width: 25vw;
+}
+
+#senhaArea
+{
+    margin-top: 50px;
+   margin-left: 700px;
+}
+
+#inputSenha
+{
+    height: 4vh;
+    width: 25vw;
+    
+}
+
+#esqSenha
+{
+    height: 2vh;
+    width: 9vw;
+    margin-left: 700px;
+    margin-top: 2px;
+}
+#avancar
+{
+    display: flex;
+    margin-top: 5px;
+    margin-left: 1100px;
+    background-color: gray;
+    font-size: 23px;
+    color: black;
+    height: 4vh;
+    width: 6vw;
+}
+
+#azul
+{
+    color: blue;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+

@@ -1,0 +1,56 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#estado
+{  
+    border-radius: 10px; 
+    padding: 10px; 
+    border: 1px solid ; 
+    outline: none;
+    font-size: 25px;
+    background-color: #0065a1;
+}
+ 
+#tituloArea
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    font-size: 20px;
+    
+    padding: 10px;
+    background: linear-gradient(to right, black 33%, transparent 40%, transparent 66%, black 70%); 
+}
+
+#subtitulo
+{
+    margin-top: 90px;
+    margin-left: 150px;
+    font-size: 20px;
+}
+
+#sobreArea
+{
+    margin-top: 24px;
+    margin-left: 70px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#segundo
+{
+    margin-top: 25px;
+}
