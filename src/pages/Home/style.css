@@ -17,6 +17,10 @@
     
 }
 
+.criador:hover{
+    transform: scale(0.9);
+    
+}
 
 .tituloArea, .subTituloArea, .ImagemArea{
     flex: 1;
