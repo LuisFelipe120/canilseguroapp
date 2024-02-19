@@ -111,8 +111,10 @@ img {
 }
 
 .geralAvali img {
-    height: 70px;
-    width: 70px;
+    height:86px;
+    width: 86px;
+    align-items: center;
+    justify-content: center;
 }
 
 .avali {

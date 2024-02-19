@@ -1,4 +1,4 @@
-import './style.css';
+import './style.css'
 import Dog from '../../assets/images/Dog.png'
 import dog from '../../assets/images/Dogin.png'
 import Vazio from '../../assets/images/favorite_Vazio.png'
@@ -40,6 +40,7 @@ const CardDetalhes = () => {
             <br/>
             <div className='geralAvali'>
               <p className='avali'>Avaliações Geral</p>
+              <br/>
               <img src={User}></img>
               <div class="estrelas">
                 <input type="radio" id="cm_star-empty" name="fb" value="" checked />
@@ -52,7 +53,6 @@ const CardDetalhes = () => {
               </div>
             </div>
 
-            <br/>
             <div id='bord'>
               <div className='bord'>
                 <p className='canil'>Avaliar este Canil</p>

@@ -1,4 +1,4 @@
-import './style.css';
+import './style.css'
 import Adulto from '../../assets/images/AdultoCaneCorso.png'
 import Filhote from '../../assets/images/FilhoteCaneCorso.png'
 import Vazio from '../../assets/images/favorite_Vazio.png'
@@ -40,10 +40,19 @@ const CardCanilDetalhes = () => {
             <br/>
             <div className='geralAvali'>
               <p className='avali'>Avaliações Geral</p>
+              <br/>
               <img src={User}></img>
-
+              <div class="estrelas">
+                <input type="radio" id="cm_star-empty" name="fb" value="" checked />
+                <label for="cm_star-1"><i class="fa"></i></label>
+                <input type="radio" id="cm_star-1" name="fb" value="1" />
+                <label for="cm_star-2"><i class="fa"></i></label>
+                <input type="radio" id="cm_star-2" name="fb" value="2" />
+                <label for="cm_star-3"><i class="fa"></i></label>
+                <input type="radio" id="cm_star-3" name="fb" value="3" />
+              </div>
             </div>
-            <br/>
+            
             <div id='bord'>
               <div className='bord'>
                 <p className='canil'>Avaliar este Canil</p>

@@ -5,7 +5,7 @@ import React from 'react'
 
 const KennelClub = () => {
   return (
-    <div>
+    <div className='kennelContent'>
       <section className='tist'>
         <h1 className='title'>Vai até um kennel Clube</h1>
         <div className='container'>O que é um Kennel Clube?</div>

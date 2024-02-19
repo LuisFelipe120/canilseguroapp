@@ -1,10 +1,19 @@
-.title {
-    text-align: center;
+.docContent{
+  height: 80vh;
+}
+
+.tist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    color: #0065a1;
-    font-size: 40px;
-    height: 70px;
-    padding-top: 17px;
+   
+}
+.NomeDocArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
@@ -15,11 +24,30 @@
     color: blue;
 }
 
-.information {
+.informationArea  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.information p {
     padding-left: 70px;
     font-size: 25px;
 }
-
+.informationLink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .mais {
     padding-left: 50px;
     padding-top: 30px;
@@ -29,7 +57,7 @@
 }
 
 .link {
-    font-size: 25px;
+    font-size: 2px;
     display: inline-block;
     width: fit-content;
     padding-left: 50px;
