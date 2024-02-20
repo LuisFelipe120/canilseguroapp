@@ -24,7 +24,7 @@ const Home = () => {
               </div>
           </section>
           </a>
-          <a href='#'>
+          <a href='/KennelClub'>
           <section className='criador'>
               <div className='tituloArea'>
                 <h1>Tenha um cachorro de Raça</h1>
