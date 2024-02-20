@@ -1,11 +1,9 @@
 import React from 'react'
 import './style.css'
-import Layout from '../../components/Layout'
 import { FaUser} from 'react-icons/fa';
 
 const CadastroUsuario = () => {
     return (
-        <Layout>
             <section className='CadastroArea'>
                 <div className='FormularioArea'>
                     <FaUser style={{color:'#d6d6d6', paddingRight:'4px'}}/>
@@ -55,7 +53,6 @@ const CadastroUsuario = () => {
                 </form>
 
             </section>
-        </Layout>
     )
 }
 
