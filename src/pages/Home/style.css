@@ -1,54 +1,50 @@
-*
-{
-    background-color: lightgrey;
+* {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.loginArea
-{
-   margin-top: 150px;
+.loginArea {
+    margin-top: 150px;
     display: flex;
     justify-content: center;
-    align-items: center;  
-    font-size: 20px;  
+    align-items: center;
+    font-size: 20px;
+    color: #0033A1;
 }
 
-#emailArea
-{
+#emailArea {
+    color: #0033A1;
     margin-top: 150px;
     margin-left: 700px;
 }
 
-#inputEmail
-{
+#inputEmail {
     height: 4vh;
     width: 25vw;
 }
 
-#senhaArea
-{
+#senhaArea {
     margin-top: 50px;
-   margin-left: 700px;
+    margin-left: 700px;
+    color: #0033A1;
 }
 
-#inputSenha
-{
+#inputSenha {
     height: 4vh;
     width: 25vw;
-    
+
 }
 
-#esqSenha
-{
+#esqSenha {
     height: 2vh;
     width: 9vw;
     margin-left: 700px;
     margin-top: 2px;
 }
-#avancar
-{
+
+#avancar {
     display: flex;
     margin-top: 5px;
     margin-left: 1100px;
@@ -59,13 +55,31 @@
     width: 6vw;
 }
 
-#azul
-{
+#azul {
     color: blue;
     font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+}
+
+.container {
+    position: relative;
+    height: 100vh; /* 100% da altura da viewport (janela do navegador) */
+    background-image: url('../../assets/images/pet3.jpg');
+    background-size: cover;
+}
+
+.border {
+    border-radius: 8px;
+    position: absolute;
+    top: 50%; /* Posiciona no meio verticalmente */
+    left: 50%; /* Posiciona no meio horizontalmente */
+    transform: translate(-50%, -50%);
+    width: 700px; /* Largura da borda */
+    height: 700px; /* Altura da borda */
+    border: 5px solid gray; /* Estilo da borda */
+    box-sizing: border-box; /* Garante que a largura e a altura incluam a borda */
 }
 
