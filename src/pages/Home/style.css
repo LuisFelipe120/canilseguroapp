@@ -1,85 +1,53 @@
-* {
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.homeArea{
+    height: 80vh;
 }
 
-.loginArea {
-    margin-top: 150px;
+.tenhaCanil{
+    padding: 10px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.tenhaCanil:hover{
+    transform: scale(0.9);
+    
+}
+
+.criador:hover{
+    transform: scale(0.9);
+    
+}
+
+.tituloArea, .subTituloArea, .ImagemArea{
+    flex: 1;
+}
+
+.tituloArea h1{
+   font-size: 40px;
+   color: #0065a1;
+   font-weight: 400px;
+}
+.subTituloArea h2{
     font-size: 20px;
-    color: #0033A1;
+    color: #0065a1;
+    font-weight: 600px;
+    padding: 10px;
 }
 
-#emailArea {
-    color: #0033A1;
-    margin-top: 150px;
-    margin-left: 700px;
+.ImagemArea img{
+    height:250px;
 }
-
-#inputEmail {
-    height: 4vh;
-    width: 25vw;
-}
-
-#senhaArea {
-    margin-top: 50px;
-    margin-left: 700px;
-    color: #0033A1;
-}
-
-#inputSenha {
-    height: 4vh;
-    width: 25vw;
-
-}
-
-#esqSenha {
-    height: 2vh;
-    width: 9vw;
-    margin-left: 700px;
-    margin-top: 2px;
-}
-
-#avancar {
+.criador{
     display: flex;
-    margin-top: 5px;
-    margin-left: 1100px;
-    background-color: gray;
-    font-size: 23px;
-    color: black;
-    height: 4vh;
-    width: 6vw;
-}
-
-#azul {
-    color: blue;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    justify-content: center;
 }
 
-.container {
-    position: relative;
-    height: 100vh; /* 100% da altura da viewport (janela do navegador) */
-    background-image: url('../../assets/images/pet3.jpg');
-    background-size: cover;
+.homeArea a{
+    text-decoration: none;
 }
-
-.border {
-    border-radius: 8px;
-    position: absolute;
-    top: 50%; /* Posiciona no meio verticalmente */
-    left: 50%; /* Posiciona no meio horizontalmente */
-    transform: translate(-50%, -50%);
-    width: 700px; /* Largura da borda */
-    height: 700px; /* Altura da borda */
-    border: 5px solid gray; /* Estilo da borda */
-    box-sizing: border-box; /* Garante que a largura e a altura incluam a borda */
-}
-

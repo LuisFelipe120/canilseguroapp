@@ -1,0 +1,50 @@
+.kennelContent{
+    
+}
+
+
+.title {
+    text-align: center;
+    justify-content: center;
+    color: #0065a1;
+    font-size: 40px;
+    height: 70px;
+    padding-top: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    padding-left: 50px;
+    padding-bottom: 30px;
+    padding-top: 60px;
+    font-size: 30px;
+    color: blue;
+}
+
+.information {
+    padding-left: 70px;
+    font-size: 25px;
+}
+
+.mais {
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 30px;
+    color: blue;
+}
+
+
+
+.link:hover{
+    color: blue;
+}
+
+.tist {
+    align-items: center;
+    justify-content: center;
+
+}

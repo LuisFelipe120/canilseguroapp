@@ -1,45 +1,48 @@
+
+import Layout from '../../components/Layout';
 import './style.css';
+import CachorroBanner from './../../assets/images/close-de-um-border-collie-em-um-campo-ofegante-sob-a-luz-do-sol_181624-30059.jpg'
+import CriadorBanner from './../../assets/images/mulher-adotando-caes-escolha-dificil_628849-155.jpg'
+
 import React from 'react'
 import '../Sobre'
 
 const Home = () => {
   return (
-    <body>
-      <div class="container">
-        <div class="border"></div>
-    
-        <img src='../../assets/images/pet3.jpg'></img>
-      <header>
-
-        <div className='loginArea'>
-          <h1 >LOGIN</h1>
-
-        </div>
-      </header>
-
-      <main className='main'>
-          <div id='emailArea'>
-            <h2>E-MAIL</h2>
-            <input placeholder='DIGITE SEU E-MAIL:' type="cadastro" id='inputEmail'></input>
+    <div>
+     <Layout>
+      <div className='homeArea'>
+        <a href='/CardPage'>
+        <section className='tenhaCanil'>
+              <div className='tituloArea'>
+                <h1>Tenha um cachorro de Raça</h1>
+              </div>
+              <div className='subTituloArea'>
+                <h2>Seja um criador responsável e legalizado</h2>
+              </div>
+              <div className='ImagemArea'>
+                <img src={CachorroBanner}/>
+              </div>
+          </section>
+          </a>
+          <a href='#'>
+          <section className='criador'>
+              <div className='tituloArea'>
+                <h1>Tenha um cachorro de Raça</h1>
+              </div>
+              <div className='subTituloArea'>
+                <h2>Seja um criador responsável e legalizado</h2>
+              </div>
+              <div className='ImagemArea'>
+                <img src={CriadorBanner}/>
+              </div>
+          </section>
+          </a>
           </div>
-
-          <div id='senhaArea'>
-            <h2>SENHA</h2>
-            <input placeholder='DIGITE SUA SENHA:' type="password" id='inputSenha'></input>
-          </div>
-
-          <div className='esqSenha'>
-            <button id='esqSenha'>ESQUECEU A SENHA</button>
-            <a href="sobre">
-              <button id='avancar' type="/">AVANÇAR</button></a>
-
-            <a id='azul' href="cadastro">LOGIN OU CADASTRE-SE</a>
-          </div>
-      </main>
-      </div>
-    </body>
-
-  )
+        
+      </Layout>
+   </div>
+      );
 }
 
 export default Home
