@@ -10,9 +10,15 @@
 
 
 .logoConteiner img {
-    height: 55px;
-    
+    height: 50px;
+    width: 100px; 
+
 }
+.logoConteiner img:hover {
+    transform: scale(1.2);
+
+}
+
 .logoConteiner{
     display: flex;
     flex-direction: row;
