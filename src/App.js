@@ -9,6 +9,9 @@ import MinhaConta from './pages/MinhaConta';
 import KennelClub from './pages/KennelClub';
 import CardDetalhes from './pages/CardDetalhes';
 import CardCanilDetalhes from './pages/CardCanilDetalhes';
+import Sobre from './pages/Sobre';
+import CadastroCanil from './pages/CadastroCanil';
+
 
 function App() {
   return (
@@ -41,6 +44,7 @@ function App() {
       <Route path='/CardDetalhes' element= {
         <CardDetalhes />
       }>
+        
 
       </Route>
 
@@ -49,6 +53,14 @@ function App() {
       } />
       <Route path='/CadastroUsuario' element={
         <CadastroUsuario/>
+      }></Route>
+
+      <Route path='/sobre' element={
+        <Sobre/>
+        }></Route>
+       <Route path='/CadastroCanil' element={
+        <CadastroCanil/>
+
       }></Route>
    </Routes>
   );

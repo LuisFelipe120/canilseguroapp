@@ -5,13 +5,14 @@ import CachorroBanner from './../../assets/images/close-de-um-border-collie-em-u
 import CriadorBanner from './../../assets/images/mulher-adotando-caes-escolha-dificil_628849-155.jpg'
 
 import React from 'react'
+import '../Sobre'
 
 const Home = () => {
   return (
     <div>
      <Layout>
       <div className='homeArea'>
-        <a href='/CardPage'>
+        <a href='/Cardpage'>
         <section className='tenhaCanil'>
               <div className='tituloArea'>
                 <h1>Tenha um cachorro de Raça</h1>
@@ -25,6 +26,7 @@ const Home = () => {
           </section>
           </a>
           <a href='/KennelClub'>
+
           <section className='criador'>
               <div className='tituloArea'>
                 <h1>Seja um Criador Especializado</h1>
