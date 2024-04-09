@@ -11,26 +11,26 @@ const Home = () => {
     <div>
      <Layout>
       <div className='homeArea'>
-        <a href='/CardPage'>
+        <a href='/Cardpage'>
         <section className='tenhaCanil'>
               <div className='tituloArea'>
                 <h1>Tenha um cachorro de Raça</h1>
               </div>
               <div className='subTituloArea'>
-                <h2>Seja um criador responsável e legalizado</h2>
+                <h2>Canis com documentação Pdigree afiliados a CBKC</h2>
               </div>
               <div className='ImagemArea'>
                 <img src={CachorroBanner}/>
               </div>
           </section>
           </a>
-          <a href='#'>
+          <a href='/kennelClub'>
           <section className='criador'>
               <div className='tituloArea'>
-                <h1>Tenha um cachorro de Raça</h1>
+                <h1>Seja um Criador Especializado</h1>
               </div>
               <div className='subTituloArea'>
-                <h2>Seja um criador responsável e legalizado</h2>
+                <h2>Seja um criador responsável, não financie canil "fundo de quintal"</h2>
               </div>
               <div className='ImagemArea'>
                 <img src={CriadorBanner}/>

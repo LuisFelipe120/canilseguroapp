@@ -4,7 +4,6 @@ import Logo from './../../assets/images/isolado-feliz-sorridente-cao-fundo-branc
 import Pesquisar from '../Pesquisar'
 import { FaUser } from 'react-icons/fa';
 import NavBar from '../NavBar';
-import { Home } from '@mui/icons-material';
 
 const Header = () => {
   return (
