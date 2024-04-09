@@ -5,6 +5,7 @@ import CachorroBanner from './../../assets/images/close-de-um-border-collie-em-u
 import CriadorBanner from './../../assets/images/mulher-adotando-caes-escolha-dificil_628849-155.jpg'
 
 import React from 'react'
+import '../Sobre'
 
 const Home = () => {
   return (
