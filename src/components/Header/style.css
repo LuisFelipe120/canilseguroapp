@@ -1,0 +1,56 @@
+.conteudo{
+    background-color: #d8d8d8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+}
+
+
+.logoConteiner img {
+    height: 50px;
+    width: 100px; 
+
+}
+.logoConteiner img:hover {
+    transform: scale(1.2);
+
+}
+
+.logoConteiner{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.menuHamburguer{
+    display: flex;
+    flex-direction: row;
+    margin: 140px;
+}
+.cidade{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.botaoLogin{
+    width: 40%;
+    background-color: #0065a1;
+    font-size: 20px;
+    color: #FFF;
+    border: solid 2px #0065a1;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.botaoLogin a{
+    text-decoration: none;
+    color: #Fff;
+}

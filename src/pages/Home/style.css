@@ -1,0 +1,53 @@
+
+.homeArea{
+    height: 80vh;
+}
+
+.tenhaCanil{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.tenhaCanil:hover{
+    transform: scale(0.9);
+    
+}
+
+.criador:hover{
+    transform: scale(0.9);
+    
+}
+
+.tituloArea, .subTituloArea, .ImagemArea{
+    flex: 1;
+}
+
+.tituloArea h1{
+   font-size: 40px;
+   color: #0065a1;
+   font-weight: 400px;
+}
+.subTituloArea h2{
+    font-size: 20px;
+    color: #0065a1;
+    font-weight: 600px;
+    padding: 10px;
+}
+
+.ImagemArea img{
+    height:250px;
+}
+.criador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeArea a{
+    text-decoration: none;
+}

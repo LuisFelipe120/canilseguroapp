@@ -1,0 +1,35 @@
+.FooterArea{
+    width: 100vw;
+    height: 10vh;
+    background-color: #7d7d7d;
+    
+}
+.linkFooterArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.linkArea p{
+    font-weight: 500;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.linkArea a{
+    color: black;
+    text-decoration: none;
+}
+.redesSocias{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.IconeRedes{
+    margin: 10px;
+    font-size: 25px;
+}
+.redesSocias a{
+    color: black;
+}
