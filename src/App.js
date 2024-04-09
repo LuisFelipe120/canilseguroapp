@@ -9,6 +9,7 @@ import MinhaConta from './pages/MinhaConta';
 import KennelClub from './pages/KennelClub';
 import CardDetalhes from './pages/CardDetalhes';
 import CardCanilDetalhes from './pages/CardCanilDetalhes';
+import Sobre from './pages/Sobre';
 
 function App() {
   return (
@@ -49,6 +50,9 @@ function App() {
       } />
       <Route path='/CadastroUsuario' element={
         <CadastroUsuario/>
+      }></Route>
+      <Route path='/sobre' element={
+        <Sobre/>
       }></Route>
    </Routes>
   );
