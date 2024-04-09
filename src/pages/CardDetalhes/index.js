@@ -20,7 +20,7 @@ const CardDetalhes = () => {
             <br/>
             <p className='text'>O Canil Collie Esporte, é um canil de <br/>
             raça pura Border Collie,afiliado com a <br/>
-            cbkc com dez anos de qualidade</p>
+            cbkc com dez anos de qualidade.</p>
             <br/>
             <img src={Dog}/>
             <br/>
