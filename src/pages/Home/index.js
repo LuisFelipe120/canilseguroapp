@@ -11,7 +11,7 @@ const Home = () => {
     <div>
      <Layout>
       <div className='homeArea'>
-        <a href='/CardPage'>
+        <a href='/Cardpage'>
         <section className='tenhaCanil'>
               <div className='tituloArea'>
                 <h1>Tenha um cachorro de Raça</h1>
@@ -24,7 +24,7 @@ const Home = () => {
               </div>
           </section>
           </a>
-          <a href='#'>
+          <a href='/kennelClub'>
           <section className='criador'>
               <div className='tituloArea'>
                 <h1>Seja um Criador Especializado</h1>
