@@ -3,7 +3,7 @@ import { FaUser } from 'react-icons/fa';
 
 import React from 'react'
 import { initialUser, useContextGlobal } from '../../context/PostContext'
-const FormPost = () => {
+const CadastroUsuario = () => {
     const { users, addUser } = useContextGlobal();
     return (
         <div className='formArea'>
@@ -33,13 +33,11 @@ const FormPost = () => {
 
 
                     <div className='UserAreaCadastro'>
-                        <label className='InformacaoesLabel' >Nome Completo</label>
                         <div className='InputArea'>
                             <Field type='text' id='NomeCompleto' className='CadastroGeral' placeholder='Nome Completo' />
                         </div>
                     </div>
                     <div className='UserAreaCadastro'>
-                        <label className='InformacaoesLabel'>Email</label>
                         <div className='InputArea'>
                             <Field className='CadastroGeral' id='CadastroEmail' type='text' placeholder='E-mail' />
                         </div>
@@ -48,7 +46,6 @@ const FormPost = () => {
                         </div>
                     </div>
                     <div className='UserAreaCadastro'>
-                        <label className='InformacaoesLabel'>Senha</label>
                         <div className='InputArea'>
                             <Field className='CadastroGeral' id='CadastroSenha' type='password' placeholder='Senha' />
                         </div>
@@ -57,13 +54,11 @@ const FormPost = () => {
                         </div>
                     </div>
                     <div className='UserAreaCadastro'>
-                        <label className='InformacaoesLabel'>CPF</label>
                         <div className='InputArea'>
                             <Field className='CadastroGeral' id='CPF' type='text' placeholder='CPF' />
                         </div>
                     </div>
                     <div className='UserAreaCadastro'>
-                        <label className='InformacaoesLabel'>Numero de Celular</label>
                         <div className='InputArea'>
                             <Field className='CadastroGeral' id='NumeroCelular' type='number' placeholder='(00) 00000-0000' />
                         </div>
@@ -81,4 +76,5 @@ const FormPost = () => {
     )
 }
 
-export default FormPost
+export default CadastroUsuario
+

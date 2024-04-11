@@ -1,23 +1,19 @@
-
+ 
 .CadastroArea{
     height: 100vh;
     width: 50vw;
-    background-color: #ccc;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    border: 2px solid #ccc;
 }
 
 .FormularioArea{
     height: 20px;
     width: 100%;
-    border: solid 2px #7d7d7d;
     border-radius: 5px;
-    background-color: #7d7d7d;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -26,14 +22,9 @@
 .FormularioArea h3{
     font-size: 25px;
     font-weight: 400px;
-    color: #d6d6d6;
+    color: #0033A1;
 }
 
-.InformcaoesLabel{
-    font-size: 20px;
-    color: #0033A1;
-    font-weight: 550;
-}
 
 .UserAreaCadastro{
     display: flex;
@@ -43,24 +34,36 @@
     padding: 10px;
 }
 .CadastroGeral{
-    border: solid 2px #0065a1;
+    border: solid 2px ;
+    border-radius: 4px;
     font-size: 15px;
     font-weight: 200;
     padding-left: 5px;
-    color: #0033A1;
     font-weight: 500;
+    color: #7d7d7d;
+    height: 40px;
+    width: 300px;
 }
 .InputArea{
+    height: 50px;
     padding: 10px;
 }
 
 .BotaoCadastrar{
+    width: 150px;
+    height: 50px;
     font-size: 15px;
-    background-color: #0065a1;
+    background-color: #fff;
     border: solid 2px #0065a1;
     border-radius: 5px;
-    color: #fff;
+    color: #0065a1;
+    font-size: 20px;
 }
+
+.BotaoCadastrar:hover{
+    border-color: #0033A1;
+}
+
 .BotaoArea{
     padding-top: 20px;
     padding-left: 140px;
@@ -75,5 +78,5 @@
     padding-left: 5px;
     color: #0033A1;
     font-weight: 500;
-}
+} 
 

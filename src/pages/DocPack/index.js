@@ -1,9 +1,11 @@
+import Layout from '../../components/Layout';
 import './styles.css';
 
 import React from 'react'
 
 const DocPack = () => {
   return (
+    <Layout>
     <div className='docContent'>
       <section className='tist'>
         <div className='NomeDocArea'>
@@ -24,6 +26,7 @@ const DocPack = () => {
         </div>
       </section>
     </div>
+    </Layout>
   )
 }
 
