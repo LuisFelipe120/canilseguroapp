@@ -12,7 +12,7 @@ const CardPage = () => {
 
           <div className='InformacoesArea'>
             <div className='TituloCanil'>
-            <a href='#'>
+            <a href='/CardDetalhes'>
               <h1>Canil CollieEsporte</h1>
             </a>
             </div>
@@ -43,7 +43,7 @@ const CardPage = () => {
         <section className='CardArea'> 
           <div className='InformacoesArea'>
           <div className='TituloCanil'>
-            <a href='#'>
+            <a href='/CaneCorso'>
               <h1>Canil CaneCorsoOficial</h1>
             </a>
             </div>

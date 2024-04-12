@@ -117,6 +117,13 @@ img {
     justify-content: center;
 }
 
+.starGeral {
+    height: 40px;
+    padding: 15px;
+    padding-left: 200px; 
+    font-size: 20px;
+}
+
 .avali {
     width: 570px;
     height: 59px;
@@ -187,37 +194,9 @@ img {
     justify-content: center;
 }
 
-.rating {
-  display: inline-block;
-  padding-right: 1px;
-  padding-top: 10px;
-
+.starGeralLast {
+    height: 40px;
+    padding: 15px;
+    padding-left: 140px; 
+    font-size: 20px;
 }
- 
-.rating input {
-  display: none;
-}
- 
-.rating label {
-  cursor: pointer;
-  width: 25px;
-  height: 25px;
-  margin: 0 2px;
-  font-size: 30px;
-  color: #ddd;
-  padding-right: 10px;
-}
- 
-.rating label:before {
-  content: "\2605";
-}
- 
-.rating input:checked ~ label {
-  color: #f90;
-}
- 
-.rating:not(:checked) label:hover,
-.rating:not(:checked) label:hover ~ label {
-  color: #f90;
-}
-
