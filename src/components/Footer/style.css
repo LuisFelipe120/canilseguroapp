@@ -1,7 +1,9 @@
 .FooterArea{
-    width: 100vw;
-    height: 10vh;
-    background-color: #7d7d7d;
+        padding: 30px;
+        margin: 0;
+        width: 100vw;
+        height: 10vh;
+        background-color: #d8d8d8;
     
 }
 .linkFooterArea{
@@ -11,6 +13,7 @@
     align-items: center;
 }
 .linkArea p{
+    padding: 20px;
     font-weight: 500;
     padding: 5px;
     font-size: 25px;
@@ -28,7 +31,7 @@
 }
 .IconeRedes{
     margin: 10px;
-    font-size: 25px;
+    font-size: 30px;
 }
 .redesSocias a{
     color: black;

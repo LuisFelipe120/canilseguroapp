@@ -1,21 +1,23 @@
 import React from 'react'
 import './style.css';
 import hotdog from '../../assets/images/close-de-um-border-collie-em-um-campo-ofegante-sob-a-luz-do-sol_181624-30059.jpg';
+import Layout from '../../components/Layout';
 
 function Sobre(){
+  
+  
   return (
+    <Layout>
    <body>
    
-      
-     <div className='header'>
-        <input className='pesquisa' placeholder='Busque seu estado'></input>
-         <img className='hotdog' src={hotdog} />
+        <div >
+         <img className='hotdog' src={hotdog}/>
       </div>
       
     <main>
       
       <div id='tituloArea'>
-          <h2 >SOBRE O PROJETO</h2>
+          <h2 ><u>SOBRE O PROJETO</u></h2>
       </div>
 
       <div id='subtitulo'>
@@ -40,13 +42,10 @@ function Sobre(){
       </div>
 
     </main>
-
-    <footer>
-
-    </footer>
-
+    
+    
    </body>
-   
+   </Layout>
   )
 }
 

@@ -11,6 +11,7 @@ import CardDetalhes from './pages/CardDetalhes';
 import CardCanilDetalhes from './pages/CardCanilDetalhes';
 import Sobre from './pages/Sobre';
 import CadastroCanil from './pages/CadastroCanil';
+import Login from './pages/Login';
 
 
 function App() {
@@ -60,6 +61,10 @@ function App() {
         }></Route>
        <Route path='/CadastroCanil' element={
         <CadastroCanil/>
+
+      }></Route>
+       <Route path='/Login' element={
+        <Login/>
 
       }></Route>
    </Routes>
