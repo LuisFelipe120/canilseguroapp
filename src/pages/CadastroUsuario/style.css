@@ -9,6 +9,26 @@
     justify-content: center;
     border-radius: 5px;
 }
+.LogoArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.imgAreaCanil{
+    padding: 10px;
+}
+.imgPreview{
+    border: solid 2px;
+    border-radius: 5px;
+}
+
+
+.imgLogoArea{
+    height:140px;
+}
 
 .FormularioArea{
     height: 20px;
@@ -50,6 +70,7 @@
 }
 
 .BotaoCadastrar{
+    
     width: 150px;
     height: 50px;
     font-size: 15px;
@@ -60,23 +81,85 @@
     font-size: 20px;
 }
 
-.BotaoCadastrar:hover{
-    border-color: #0033A1;
+.CadastroGeral:hover{
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    -webkit-box-shadow: 0px 0px 15px 1px #0065a1;
+    -moz-box-shadow: 0px 0px 15px 1px #0065a1;
+    box-shadow: 0px 0px 5px 0px #0065a1;
+    border:1px solid #0065a1;
+    outline:none; 
+
+}
+.mensagemArea:hover{
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    -webkit-box-shadow: 0px 0px 15px 1px #0065a1;
+    -moz-box-shadow: 0px 0px 15px 1px #0065a1;
+    box-shadow: 0px 0px 5px 0px #0065a1;
+    border:1px solid #0065a1;
+    outline:none; 
+
 }
 
-.BotaoArea{
+.BotaoAreaCadastro{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
     padding-top: 20px;
-    padding-left: 140px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.voltarCadastro a{
+    color: #0065a1;
+    text-decoration: none;
+}
+
+.BotaoAreaCadastroCanil{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 200px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+
+.voltarCadastro{
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+    background-color: #fff;
+    border: solid 2px #0065a1;
+    border-radius: 5px;
+    color: #0065a1;
+    font-size: 20px;
+}
+.cadastrar{
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+    background-color: #fff;
+    border: solid 2px #0065a1;
+    border-radius: 5px;
+    color: #0065a1;
+    font-size: 20px;
+}
+.BotaoCanil{
+    width: 200%;
+    display: flex;
 }
 
 .mensagemArea{
-    border: solid 2px #0065a1;
+  
+    border: solid 2px;
     font-size: 15px;
     width: 100%;
     height: 200px;
     font-weight: 200;
     padding-left: 5px;
-    color: #0033A1;
     font-weight: 500;
 } 
 

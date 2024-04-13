@@ -1,6 +1,5 @@
 import { createContext, useContext, useState } from "react"
 
- 
 const userInitial = [
     {id: 1, nome: 'admin', email:'admin@gmail.com' ,senha: '1234', cpf: '000.000.000-00', numero:'(00) 00000-0000'}
 ]
@@ -27,7 +26,9 @@ const initalCanil={
     nome:'',
     email:'',
     endereco:'',
-    mensagem:''
+    mensagem:'',
+    img:null,
+
 }
  
 const ContextGlobal = createContext(undefined);
@@ -37,7 +38,8 @@ const ContextGlobal = createContext(undefined);
 
  
 const ContextGlobalProvider = ({ children }) => {
-    const [users, setUsers, canis, setCanis] = useState(userInitial, canilInitial);
+    const [users, setUsers] = useState(userInitial);
+    const [ canis, setCanis] = useState(canilInitial);
  
     const addUser = (user) => {
         setUsers([...users, user]);
