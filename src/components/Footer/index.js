@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter, FaGithub, FaYoutube } from 'react-icons/fa';
 const Footer = () => {
   return (
 <div className='FooterArea'>
@@ -20,10 +20,28 @@ const Footer = () => {
     <div className='redesSocias'>
     
     
-    
-    <a href='#'><div className='IconeRedes'><FaFacebook /></div> </a>
-    <a href='#'><div className='IconeRedes'><FaInstagram /> </div></a>
-    <a href='#'><div className='IconeRedes'><FaTwitter /> </div></a>
+    <ul class="wrapper">
+      <li class="icon facebook">
+        <span class="tooltip">Facebook</span>
+        <span><i class="fab fa-facebook-f"> <FaFacebook size='2em'/></i></span>
+      </li>
+      <li class="icon twitter">
+        <span class="tooltip">Twitter</span>
+        <span><i class="fab fa-twitter"><FaTwitter size='2em'/></i></span>
+      </li>
+      <li class="icon instagram">
+        <span class="tooltip">Instagram</span>
+        <span><i class="fab fa-instagram"><FaInstagram size='2em'/></i></span>
+      </li>
+      <li class="icon github">
+        <span class="tooltip">Github</span>
+        <span><i class="fab fa-github"><FaGithub size='2em'/></i></span>
+      </li>
+      <li class="icon youtube">
+        <span class="tooltip">Youtube</span>
+        <span><i class="fab fa-youtube"><FaYoutube size='2em'/></i></span>
+      </li>
+    </ul>
     </div>
 </div>
   )

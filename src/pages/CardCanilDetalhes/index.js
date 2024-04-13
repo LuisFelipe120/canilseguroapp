@@ -3,10 +3,12 @@ import Adulto from '../../assets/images/AdultoCaneCorso.png'
 import Filhote from '../../assets/images/FilhoteCaneCorso.png'
 import Vazio from '../../assets/images/favorite_Vazio.png'
 import Avaliacao from '../../components/Avaliacao'
+import Layout from '../../components/Layout'
 import React from 'react';
 
 const CardCanilDetalhes = () => {
   return (
+    <Layout>
     <div>
       <section>
           <div className='box'>
@@ -64,6 +66,7 @@ const CardCanilDetalhes = () => {
           </div>
       </section>
     </div>
+    </Layout>
   )
 }
 
