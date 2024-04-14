@@ -4,6 +4,7 @@ import './../CadastroUsuario/style.css'
 import Logo from '../../assets/images/CannilSeguro_Logo.png'
 import React, { useState } from 'react'
 import { initalCanil, useContextGlobal } from '../../context/PostContext'
+import { WrapText } from '@mui/icons-material';
 const CadastroCanil = () => {
     const { canis, addCanil } = useContextGlobal();
     const [previewImage, setPreviewImage] = useState(null);
@@ -90,7 +91,7 @@ const CadastroCanil = () => {
                         <div className='UserAreaCadastro'>
                             <label className='InformacaoesLabel'>Mensagem Sobre o Canil</label>
                             <div className='InputArea'>
-                                <Field className='mensagemArea' id='MensagemCanil' name='mensagem' type='text' placeholder='Digite sua mensagem' />
+                                <Field  className='mensagemArea' as="textarea" id='MensagemCanil' name='mensagem' type='text' size={50} max-lenght={50}  placeholder='Digite sua mensagem'></Field>
                             </div>
                         </div>
                         <div className='BotaoAreaCadastroCanil'>
