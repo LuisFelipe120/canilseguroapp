@@ -7,12 +7,13 @@ const Footer = () => {
     <div className='linkFooterArea'>
     <div className='linkArea'>
         <p>
-            <a href='/Sobre'>Sobre o Canil Seguro</a>
+            <a href='Sobre'><u>Sobre o Canil Seguro</u></a>
+
         </p>
     </div>  
     <div className='linkArea'>
         <p>
-           <a href='https://cbkc.org/'>Confederação Brasileira de Cinifolia</a> 
+           <a href='https://cbkc.org/'><u>Confederação Brasileira de Cinifolia</u></a> 
         </p>
     </div>  
     </div>
