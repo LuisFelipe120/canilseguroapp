@@ -1,14 +1,16 @@
+import Layout from '../../components/Layout';
 import './styles.css';
 
 import React from 'react'
 
 const DocPack = () => {
   return (
+    <Layout>
     <div className='docContent'>
       <section className='tist'>
         <div className='NomeDocArea'>
         <h1 className='title'>Documentação Pedigree</h1>
-        <div className='container'>O que é Documentação Pedigree?</div>
+        <div className='containerDoc'>O que é Documentação Pedigree?</div>
         </div>
         <div className='informationArea'>
           <div className='information'>
@@ -24,6 +26,7 @@ const DocPack = () => {
         </div>
       </section>
     </div>
+    </Layout>
   )
 }
 

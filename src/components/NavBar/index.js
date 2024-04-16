@@ -34,8 +34,8 @@ const NavBar = () => {
         }}
       >
         <MenuItem onClick={handleClose}><a href='/minhaconta' style={{textDecoration:'none', color:'#0065a1'}}>Minha conta</a></MenuItem>
-        <MenuItem onClick={handleClose}><a href='#' style={{textDecoration:'none', color:'#0065a1'}}> Documento Pedigree</a></MenuItem>
-        <MenuItem onClick={handleClose}><a href='#' style={{textDecoration:'none', color:'#0065a1'}} >Kennel Club</a></MenuItem>
+        <MenuItem onClick={handleClose}><a href='/DocPack' style={{textDecoration:'none', color:'#0065a1'}}> Documento Pedigree</a></MenuItem>
+        <MenuItem onClick={handleClose}><a href='/KennelClub' style={{textDecoration:'none', color:'#0065a1'}} >Kennel Club</a></MenuItem>
         <MenuItem onClick={handleClose}><a href='/' style={{textDecoration:'none', color:'#0065a1'}} >Tenha um cachorro de raça</a></MenuItem>
       </Menu>
     </div>
