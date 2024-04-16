@@ -15,8 +15,11 @@ import Login from './pages/Login';
 
 
 function App() {
+
   return (
+    
    <Routes>
+     
     <Route path='/'element= {
       <Home />
     } >
@@ -44,6 +47,12 @@ function App() {
       
       <Route path='/CardDetalhes' element= {
         <CardDetalhes />
+      }>
+        
+
+      </Route>
+      <Route path='/CardcanilDetalhes' element= {
+        <CardCanilDetalhes />
       }>
         
 

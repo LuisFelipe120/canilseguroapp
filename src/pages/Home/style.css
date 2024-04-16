@@ -1,6 +1,7 @@
 
 .homeArea{
-    height: 80vh;
+    min-height: 80vh;
+    
 }
 
 .tenhaCanil{
@@ -40,6 +41,7 @@
 
 .ImagemArea img{
     height:250px;
+    border-radius: 15px;
 }
 .criador{
     display: flex;
