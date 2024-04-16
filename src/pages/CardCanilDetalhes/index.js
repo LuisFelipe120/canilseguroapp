@@ -5,7 +5,6 @@ import Vazio from '../../assets/images/favorite_Vazio.png'
 import Avaliacao from '../../components/Avaliacao'
 import Layout from '../../components/Layout'
 import React from 'react';
-import Layout from '../../components/Layout'
 
 const CardCanilDetalhes = () => {
   return (
