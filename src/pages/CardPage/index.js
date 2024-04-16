@@ -9,10 +9,10 @@ const CardPage = () => {
       <Layout>
         <div className='bordaArea'>
         <section className='CardArea'>
-
+ 
           <div className='InformacoesArea'>
             <div className='TituloCanil'>
-            <a href='#'>
+            <a href='/CardDetalhes'>
               <h1>Canil CollieEsporte</h1>
             </a>
             </div>
@@ -37,13 +37,13 @@ const CardPage = () => {
                 <Avaliacao/>
               </div>
             </div>
-
+ 
         </section>
-
-        <section className='CardArea'> 
+ 
+        <section className='CardArea'>
           <div className='InformacoesArea'>
           <div className='TituloCanil'>
-            <a href='#'>
+            <a href='/CaneCorso'>
               <h1>Canil CaneCorsoOficial</h1>
             </a>
             </div>
@@ -69,14 +69,14 @@ const CardPage = () => {
                 <Avaliacao/>
             </div>
             </div>
-          
-
-
+         
+ 
+ 
         </div></section>
         </div>
       </Layout>
     </div>
   )
 }
-
+ 
 export default CardPage
