@@ -1,4 +1,5 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useEffect, useState } from "react"
+import api from "../services/api"
 
 const userInitial = [
     {id: 1, nome: 'admin', email:'admin@gmail.com' ,senha: '1234', cpf: '000.000.000-00', numero:'(00) 00000-0000'}
@@ -35,14 +36,35 @@ const ContextGlobal = createContext(undefined);
 
 //contextCanil
 
+// useEffect(() => {
+//     const fetchUsuarios = async () => {
+//         try {
+//             const resposta = await api.get('/usuarios');
+//             console.log(resposta.data);
+//             setUsers(resposta.data);
+//         } catch (error) {
+//             console.log(`Erro ao buscar dados: `, error);
+//         }
+//     }
+//     fetchUsuarios();
+// }, [])
 
  
 const ContextGlobalProvider = ({ children }) => {
     const [users, setUsers] = useState(userInitial);
     const [ canis, setCanis] = useState(canilInitial);
  
-    const addUser = (user) => {
-        setUsers([...users, user]);
+    const addUser = (users) => {
+        console.log(users)
+        // const formData = new FormData(post);
+        // sem imagem
+        const fetchUser = async () => {await api.post('/usuarios', users)}
+        // const formData = new FormData();
+        // formData.append('user', JSON.stringify(user));
+        // formData.append('file', user.file);
+        // const fetchUser = async() => {await api.('/usuarios', formData)}
+        fetchUser();
+        // setUsers([...users, user]);
     }
 
     //contextCanil

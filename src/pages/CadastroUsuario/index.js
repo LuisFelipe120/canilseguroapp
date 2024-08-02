@@ -5,18 +5,17 @@ import Logo from '../../assets/images/CannilSeguro_Logo.png';
 import React from 'react'
 import { initialUser, useContextGlobal } from '../../context/PostContext'
 const CadastroUsuario = () => {
-    
-
+     
     const { users, addUser } = useContextGlobal();
     console.log(users)
     return (
         <div className='formArea'>
             <Formik
+    
                 initialValues={initialUser}
                 onSubmit={(values, actions) => {
                     const newUser = {
 
-                        id: users[users.length - 1]?.id ? users[users.length - 1]?.id + 1 : 1,
                         nome: values.nome,
                         email: values.email,
                         senha: values.senha,
