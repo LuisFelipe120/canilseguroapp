@@ -19,6 +19,8 @@ const CadastroCanil = () => {
         if (file) {
             reader.readAsDataURL(file);
         }
+
+        
     }
     return (
         <div className='formArea'>
@@ -26,7 +28,6 @@ const CadastroCanil = () => {
                 initialValues={initalCanil}
                 onSubmit={(values, actions) => {
                     const newCanil = {
-                        id: canis[canis.length - 1]?.id ? canis[canis.length - 1]?.id + 1 : 1,
                         nome: values.nome,
                         email: values.email,
                         endereco: values.endereco,
@@ -79,7 +80,7 @@ const CadastroCanil = () => {
                                     <img src={previewImage} alt='preview' className='imgPreview' />
                                 }
                             </div>
-                            <input className='inputField' id='img' name='img'
+                            <input className='inputField' id='img' name='img' 
                                 type='file' onChange={(e) => {
                                     handleFileChange(e)
 

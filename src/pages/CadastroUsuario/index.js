@@ -8,12 +8,13 @@ const CadastroUsuario = () => {
      
     const { users, addUser } = useContextGlobal();
     console.log(users)
+    
     return (
         <div className='formArea'>
             <Formik
     
                 initialValues={initialUser}
-                onSubmit={(values, actions) => {
+                onSubmit={(values, actions, ) => {
                     const newUser = {
 
                         nome: values.nome,
@@ -50,7 +51,7 @@ const CadastroUsuario = () => {
                             <Field className='CadastroGeral' id='CadastroEmail' name="email" type='text' placeholder='E-mail' />
                         </div>
                         <div className='InputArea'>
-                            <input className='CadastroGeral' id='ConfirmacaoEmail'  placeholder='E-mail de Confirmação' type='email' />
+                            <input className='CadastroGeral' id='ConfirmacaoEmail'  name="emailConfirmacao" placeholder='E-mail de Confirmação' type='email'/>
                         </div>
                     </div>
                     <div className='UserAreaCadastro'>
@@ -58,7 +59,7 @@ const CadastroUsuario = () => {
                             <Field className='CadastroGeral' id='CadastroSenha' name="senha" type='password' placeholder='Senha' />
                         </div>
                         <div className='InputArea'>
-                            <input className='CadastroGeral' id='ConfirmacaoSenha' type='password' placeholder='Confirme sua Senha' />
+                            <input className='CadastroGeral' id='ConfirmacaoSenha' name="senhaConfirmacao" type='password' placeholder='Confirme sua Senha' />
                         </div>
                     </div>
                     <div className='UserAreaCadastro'>

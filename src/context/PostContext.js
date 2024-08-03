@@ -69,7 +69,13 @@ const ContextGlobalProvider = ({ children }) => {
 
     //contextCanil
         const addCanil = (canil) => {
-            setCanis([...canis, canil]);
+             const formData = new FormData();
+        formData.append('canil', JSON.stringify(canil));
+        formData.append('file', canil.file);
+        const fetchCanil = async() => {await api.post('/canis', formData)}
+        fetchCanil()
+        setCanis([...canis, canil]);
+
         }
 
  
