@@ -1,0 +1,84 @@
+
+.inputArea{
+    font-size: 25px;
+   font-family: Arial, sans-serif; 
+}
+.inputLogin{
+    font-size: 40px;
+    margin-top: 6px;
+    border-radius: 6px;
+}
+.textArea{
+    margin-top: 25px;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+}
+.InputSenha{
+    font-size: 40px;
+    margin-top: 6px;
+    border-radius: 6px;
+}
+.completeArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 80vh;
+
+}
+
+.formArea { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 35vw;
+    height: 380px;
+    border: 10px gray solid;
+    background-color: lightgray; 
+    border-radius: 6px;
+    padding: 20px; 
+}
+.botao1{
+    font-size: 18px;
+    height: 4vh;
+    width: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    background-color: #0065a1;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+.senhitaEsquecita{
+
+font-size: 18px;
+
+}
+.pagodito{
+    padding: 3px;
+}
+.AreaUsuario{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.cadastroLogin{
+  padding-top: 3px;
+}
+.pagodito a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #0065a1;
+
+}
+
+.cadastroLogin a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #0065a1;
+  }
