@@ -4,7 +4,6 @@ import './../CadastroUsuario/style.css'
 import Logo from '../../assets/images/CannilSeguro_Logo.png'
 import React, { useState } from 'react'
 import { initalCanil, useContextGlobal } from '../../context/PostContext'
-import { WrapText } from '@mui/icons-material';
 const CadastroCanil = () => {
     const { canis, addCanil } = useContextGlobal();
     const [previewImage, setPreviewImage] = useState(null);
@@ -28,12 +27,12 @@ const CadastroCanil = () => {
                 initialValues={initalCanil}
                 onSubmit={(values, actions) => {
                     const newCanil = {
-                        nome: values.nome,
+                        canil: values.canil,
                         email: values.email,
                         endereco: values.endereco,
                         mensagem: values.mensagem,
-                        img: previewImage
-
+                        img: previewImage,
+                        usuarios_id: values.usuarios_id
 
 
                     }
@@ -61,8 +60,11 @@ const CadastroCanil = () => {
                         </div>
 
                         <div className='UserAreaCadastro'>
+                        <div className='InputArea'>
+                                <Field type='number' id='NomeCompletoCanil' name='usuarios_id' className='CadastroGeral' placeholder='Id' />
+                            </div>
                             <div className='InputArea'>
-                                <Field type='text' id='NomeCompletoCanil' name='nome' className='CadastroGeral' placeholder='Nome Completo' />
+                                <Field type='text' id='NomeCompletoCanil' name='canil' className='CadastroGeral' placeholder='Canil nome' />
                             </div>
                         </div>
                         <div className='UserAreaCadastro'>

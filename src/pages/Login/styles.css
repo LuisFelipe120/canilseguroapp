@@ -1,24 +1,24 @@
 
-.inputArea{
+.inputAreaLogin{
     font-size: 25px;
    font-family: Arial, sans-serif; 
 }
-.inputLogin{
+.inputLoginArea{
     font-size: 40px;
     margin-top: 6px;
     border-radius: 6px;
 }
-.textArea{
+.textArealogin{
     margin-top: 25px;
     font-size: 25px;
     font-family: Arial, sans-serif;
 }
-.InputSenha{
+.InputSenhaLogin{
     font-size: 40px;
     margin-top: 6px;
     border-radius: 6px;
 }
-.completeArea{
+.completeAreaLogin{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@
 
 }
 
-.formArea { 
+.formAreaLogin { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,14 +60,14 @@ font-size: 18px;
 .pagodito{
     padding: 3px;
 }
-.AreaUsuario{
+.AreaUsuarioLogin{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.cadastroLogin{
+.cadastroLoginArea{
   padding-top: 3px;
 }
 .pagodito a{
@@ -77,7 +77,7 @@ font-size: 18px;
 
 }
 
-.cadastroLogin a{
+.cadastroLoginArea a{
     font-size: 18px;
     text-decoration: none;
     color: #0065a1;

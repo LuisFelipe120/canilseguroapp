@@ -1,14 +1,5 @@
-import { createContext, useContext, useEffect, useState } from "react"
+import { createContext, useContext, useState } from "react"
 import api from "../services/api"
-
-const userInitial = [
-    {id: 1, nome: 'admin', email:'admin@gmail.com' ,senha: '1234', cpf: '000.000.000-00', numero:'(00) 00000-0000'}
-]
- 
- //contextCanil
-
- const canilInitial =[{id:1, nome:'adminCanil', email:'adminCanil@gmail.com', endereco: '0000-000', mensagem:'canil seguro' }]
-
 
 
 const initialUser = {
@@ -34,26 +25,15 @@ const initalCanil={
  
 const ContextGlobal = createContext(undefined);
 
+
 //contextCanil
 
-// useEffect(() => {
-//     const fetchUsuarios = async () => {
-//         try {
-//             const resposta = await api.get('/usuarios');
-//             console.log(resposta.data);
-//             setUsers(resposta.data);
-//         } catch (error) {
-//             console.log(`Erro ao buscar dados: `, error);
-//         }
-//     }
-//     fetchUsuarios();
-// }, [])
-
- 
 const ContextGlobalProvider = ({ children }) => {
-    const [users, setUsers] = useState(userInitial);
-    const [ canis, setCanis] = useState(canilInitial);
- 
+    const [users, setUsers] = useState([]);
+    const [ canis, setCanis] = useState([]);
+
+    const [logado, setLogado] = useState(false);
+
     const addUser = (users) => {
         console.log(users)
         // const formData = new FormData(post);
@@ -101,7 +81,7 @@ const removeUser =(id) =>{
 
  
    
-    return <ContextGlobal.Provider value={{users, addUser, canis, addCanil ,removeUser, removeCanil}}>
+    return <ContextGlobal.Provider value={{users, addUser, canis, addCanil ,removeUser, removeCanil, logado, setLogado }}>
         {children}
     </ContextGlobal.Provider>;
 }
@@ -117,7 +97,7 @@ const useContextGlobal = () => {
 }
 
 
- 
+
 export {
     initialUser,
     initalCanil,

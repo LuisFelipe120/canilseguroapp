@@ -2,24 +2,23 @@ import React, { useState } from "react";
 import './styles.css';
 import Layout from "../../components/Layout";
 import api from "../../services/api";
+import { useContextGlobal } from "../../context/PostContext";
+import { Navigate } from "react-router-dom";
 
 const Login = () => {
     const [dados, setDados] = useState({
         email: '',
         senha: ''
     })
-    const [logado, setlogado] = useState(
-        false
-
-    )
+    const {logado, setLogado} = useContextGlobal()
     const [erroLogin, setErroLogin] = useState(
         false
 
     )
-
     const handleChange = (e) => {
         setDados({ ...dados, [e.target.name]: e.target.value })
     }
+    console.log(logado)
 
     const handleCadastrar = (e) => {
         e.preventDefault();
@@ -27,30 +26,32 @@ const Login = () => {
             console.log(data)
             if (!data.data) {
                 setErroLogin(true)
+                setLogado(false)
+
                 return
             }
             setErroLogin(false)
-            setlogado(true)
+            setLogado(true)
+            Navigate('/painel')
             return
-            //painel
         }
         )
     }
     return (
         <Layout>
-            <div className="completeArea">
-                <form method="post" onSubmit={handleCadastrar} className="formArea">
-                    <div className="inputArea">
+            <div className="completeAreaLogin">
+                <form method="post" onSubmit={handleCadastrar} className="formAreaLogin">
+                    <div className="inputAreaLogin">
                         <label>
                             Usuarios
-                            <input type="email" name="email" onChange={handleChange} value={dados.email}  placeholder="Digite seu e-mail" className="inputLogin" />
+                            <input type="email" name="email" onChange={handleChange} value={dados.email}  placeholder="Digite seu e-mail" className="inputLoginArea" />
                         </label>
                     </div>
 
-                    <div className="textArea">
+                    <div className="textAreaLogin">
                         <label>
                             Senha
-                            <input type="password" name="senha" onChange={handleChange} value={dados.senha} placeholder="Digite sua senha" className="InputSenha" />
+                            <input type="password" name="senha" onChange={handleChange} value={dados.senha} placeholder="Digite sua senha" className="InputSenhaLogin" />
 
                         </label>
                     </div>
@@ -58,8 +59,8 @@ const Login = () => {
                     <div>
                     <button type="submit" className="botao1">AVANÇAR</button>
                 </div>
-                <div className="AreaUsuario">
-                <div className="cadastroLogin">
+                <div className="AreaUsuarioLogin">
+                <div className="cadastroLoginArea">
                     <a href="/usuarios">Cadastre-se</a>
                 </div>
 

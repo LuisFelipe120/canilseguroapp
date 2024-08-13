@@ -12,6 +12,8 @@ import CardCanilDetalhes from './pages/CardCanilDetalhes';
 import Sobre from './pages/Sobre';
 import CadastroCanil from './pages/CadastroCanil';
 import Login from './pages/Login';
+import ClientPrivateRoute from './components/Auth/ClientPrivateRoute';
+import Painel from './pages/painel';
 
 
 function App() {
@@ -76,6 +78,13 @@ function App() {
         <Login/>
 
       }></Route>
+          {/* rota privada */}
+          <Route exact path="/painel" element={
+        <ClientPrivateRoute>
+          <Painel />
+        </ClientPrivateRoute>
+        
+      }/>
    </Routes>
   );
 }
