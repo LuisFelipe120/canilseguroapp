@@ -3,10 +3,10 @@ import { Navigate } from 'react-router-dom'
 import { useContextGlobal } from '../../context/PostContext'
 
 const ClientPrivateRoute = ({children}) => {
-    const {Logado} = useContextGlobal()  
-    console.log(Logado)
+    const {logado} = useContextGlobal()  
+    console.log("Valor de logado:", logado);
   return (
-    (Logado ? children : <Navigate to="/login" />)
+    (logado ? children : <Navigate to="/login" />)
   )
 }
 

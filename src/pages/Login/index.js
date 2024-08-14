@@ -3,13 +3,16 @@ import './styles.css';
 import Layout from "../../components/Layout";
 import api from "../../services/api";
 import { useContextGlobal } from "../../context/PostContext";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+    const navigate = useNavigate();
     const [dados, setDados] = useState({
         email: '',
         senha: ''
     })
+  
     const {logado, setLogado} = useContextGlobal()
     const [erroLogin, setErroLogin] = useState(
         false
@@ -27,12 +30,11 @@ const Login = () => {
             if (!data.data) {
                 setErroLogin(true)
                 setLogado(false)
-
                 return
             }
             setErroLogin(false)
             setLogado(true)
-            Navigate('/painel')
+            navigate('/painel')
             return
         }
         )
