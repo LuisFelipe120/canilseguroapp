@@ -1,51 +1,54 @@
 import React from 'react'
 import './style.css';
-import hotdog from '../../assets/images/close-de-um-border-collie-em-um-campo-ofegante-sob-a-luz-do-sol_181624-30059.jpg';
+import hotdog from '../../assets/images/border-collie.jpg';
 import Layout from '../../components/Layout';
 
-function Sobre(){
-  
-  
+function Sobre() {
+
+
   return (
     <Layout>
-   <body>
-   
-        <div >
-         <img className='hotdog' src={hotdog}/>
-      </div>
-      
-    <main>
-      
-      <div id='tituloArea'>
-          <h2 ><u>SOBRE O PROJETO</u></h2>
+      <div className='sobreDiv'>
+        <div className='area'>
+          <div id='tituloArea'>
+            <h2 className='project'><strong>SOBRE O PROJETO</strong></h2>
+          </div>
+          
+          <div id='subtitulo'>
+            <h2>Vamos te contar um pouco desse projeto!</h2>
+          </div>
+        </div>
+
+
+        <div>
+          <img className='hotdog' src={hotdog} />
+        </div>
       </div>
 
-      <div id='subtitulo'>
-          <h2>Vamos te contar um pouco desse projeto!</h2>
-      </div>
-     
       <div className='sobreArea'>
-          <p id='primeiro'>O canil Canaã, fundado em 2014, é líder e referência regional 
-            no estado do Espírito Santo. Seus proprietários, que sempre tiveram e amaram os cães, iniciaram as atividades do canil com algumas poucas raças e não demorou muito
-            para que a pequena criação ganhasse destaque entre os criadores.
-            Com uma grande procura e o aumento do plantel, os fundadores do Canil Canaã decidiram transferir a sua sede para a cidade de Guarapari, famosa cidade litorânea
-            do estado do Espírito Santo, e que possui clima agradável, praias paradisíacas e um bom potencial logístico para a atividade.
-          </p>
-          <p id='segundo'>Com o reconhecimento alcançado pela qualidade, cuidados, carinho e dedicação na 
-            criação de seus filhotes, o Canil Canaã decidiu em 2022 investir em uma nova sede, com uma estrutura ainda mais espaçosa
-            e que promova o bem estar, qualidade e saúde dos animais.
-            Além de uma infraestrutura toda modernizada, o canil é registrado pela
-            Confederação Brasileira de Cinofilia e possui padreadores e matrizes de primeira linha, com destaque para as raças Border Collie, Golden Retriever e Beagle.
-            O canil trabalha com venda permanente de filhotes e compreende a sua responsabilidade de entregar os cães com segurança.
-            Através de uma parceria estratégica de longa data com a GolLog, oferecemos transporte de qualidade para que você receba seu filhote com total segurança em todo território nacional.
-          </p>
+        <p id='textArea'>
+          Bem-vindo ao nosso projeto dedicado a compartilhar canis reconhecidos pela CBKC de maneira ética e responsável. Nossa missão é conectar amantes de cães com criadores confiáveis, promovendo práticas de criação que respeitem o bem-estar animal.
+          <br/>
+          <br/>
+          Somos entusiastas e especialistas em cinofilia, comprometidos com a disseminação de informações precisas e transparentes sobre canis e a criação de cães no Brasil.
+          <br/>
+          <br/>
+          Nossos Valores
+          <br/>
+          <br/>
+          Ética e Transparência: Trabalhamos com canis que seguem os padrões da CBKC e prezamos pela transparência em todas as ações.
+          Bem-Estar Animal: Priorizamos a saúde e o bem-estar dos cães, promovendo práticas de criação seguras e saudáveis.
+          Educação e Consciência: Fornecemos recursos para ajudar futuros donos a tomar decisões informadas e responsáveis.
+          Comunidade e Apoio:Construímos uma comunidade de amantes de cães que se apoiam mutuamente, oferecendo suporte contínuo.
+          <br/>
+          <br/>
+          Nosso Compromisso
+          <br/>
+          <br/>
+          Queremos ser uma referência confiável para quem procura canis éticos, garantindo que cada cão encontre um lar amoroso e responsável.
+        </p>
       </div>
-
-    </main>
-    
-    
-   </body>
-   </Layout>
+    </Layout>
   )
 }
 

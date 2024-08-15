@@ -4,8 +4,8 @@ import DocPack from './pages/DocPack';
 import Home from './pages/Home';
 import CardPage from './pages/CardPage';
 import CadastroUsuario from './pages/CadastroUsuario';
+import CadastrarRacas from './pages/CadastrarRacas';
 import MinhaConta from './pages/MinhaConta';
-
 import KennelClub from './pages/KennelClub';
 import CardDetalhes from './pages/CardDetalhes';
 import CardCanilDetalhes from './pages/CardCanilDetalhes';
@@ -41,6 +41,12 @@ function App() {
 
       <Route path='/KennelClub' element= {
         <KennelClub />
+      }>
+
+      </Route>
+
+      <Route path='/CadastrarRacas' element= {
+        <CadastrarRacas />
       }>
 
       </Route>

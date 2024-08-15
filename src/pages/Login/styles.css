@@ -1,43 +1,43 @@
-
-.inputArea{
+.inputAreaLogin{
     font-size: 25px;
-   font-family: Arial, sans-serif; 
+   font-family: Arial, sans-serif;
 }
-.inputLogin{
+.inputLoginArea{
     font-size: 40px;
     margin-top: 6px;
     border-radius: 6px;
 }
-.textArea{
+.textArealogin{
     margin-top: 25px;
     font-size: 25px;
     font-family: Arial, sans-serif;
 }
-.InputSenha{
+.InputSenhaLogin{
     font-size: 40px;
     margin-top: 6px;
     border-radius: 6px;
 }
-.completeArea{
+.completeAreaLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100vw;
     height: 80vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   
+ 
 }
-
-.formArea { 
+ 
+.formAreaLogin {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 35vw;
-    height: 40vh;
+    height: 380px;
     border: 10px gray solid;
-    background-color: lightgray; 
+    background-color: lightgray;
     border-radius: 6px;
-    padding: 20px; 
+    padding: 20px;
 }
 .botao1{
     font-size: 18px;
@@ -52,29 +52,32 @@
     color: white;
 }
 .senhitaEsquecita{
-height: 8vh;
-width: 10vw;
-display: flex;
-margin-top: -12px;
-margin-right: 140px;
+ 
 font-size: 18px;
-
+ 
 }
 .pagodito{
-    height: 35px;
-    margin-left: -115px;
+    padding: 3px;
 }
-.login1{
-height: 8vh;
-width: 10vw;
-display: flex;
-margin-top: 12px;
-margin-left: 230px;
-font-size: 18px;
-
+.AreaUsuarioLogin{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-.cadastro{
-    height: 2vh;
-    width: 5vw;
-    
+.cadastroLoginArea{
+  padding-top: 3px;
 }
+.pagodito a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #0065a1;
+ 
+}
+ 
+.cadastroLoginArea a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #0065a1;
+  }

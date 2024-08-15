@@ -1,95 +1,35 @@
-
-
-
-.header{
-
-    
+.sobreDiv{
     display: flex;
-    justify-content: column;
+    justify-content: space-around;
     align-items: center;
-    margin-left: 900px;
 }
 
-.pesquisa
-{  
-   
-    border-radius: 10px; 
-    padding: 10px; 
-    border: 1px solid ; 
-    outline: none;
-    font-size: 40px;
-    
-}
- 
-#tituloArea
-{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin-top: -250px;
-    font-size: 35px;
-    color: #0033A1;
-    padding: 10px;
-    margin-left: 45px;
-    
-    
-}
-
-#subtitulo
-{
-    /* margin-top: 30px; */
-    display: flex;
-    justify-content: left;
-    font-size: 25px;
-    margin-left: 55px;
-}
-
-/* margin-left: 650px; */
-
-.sobreArea
-{
-    margin-top: 120px;
-    margin-left: 70px;
-    font-size: 37px;
-    padding: 10px;
-}
-
-#primeiro{
-    margin-top: 90px;
-margin-bottom: 50px;
-}
-
-#segundo
-{
+.hotdog{
     margin-top: 40px;
-}
-
-.hotdog{ 
+    border: 5px solid #0033A1; 
     width: 400px;
     height: 300px;
-    margin-left: 1900px;
+}
+
+.area{
     margin-top: 10px;
-    display: inline-block;
-    width: 500px;
-    height: 400px;
-    border: 8px solid #0033A1; 
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
 }
 
-.linha{
-    width: 100%;
-    height: 20%;
-    padding-top: 20px;
-    border: solid;
-    background-color: #0033A1;
-}
-.linha2{
-    width: 100%;
-    height: 40%;
-    padding-bottom: 25px;
-    border: solid;
-    background-color: #0033A1;
+.project {
+    font-size: 50px;
+    color: #0033A1;
+    text-decoration: underline;
 }
 
-
-  
- 
+.sobreArea {
+    font-size: 1.5rem; /* Ajustado para um tamanho relativo */
+    padding: 20px; /* Adiciona um pouco de espaço interno */
+    text-align: justify; /* Para melhorar a leitura */
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

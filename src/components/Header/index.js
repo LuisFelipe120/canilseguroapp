@@ -23,7 +23,7 @@ const Header = () => {
             
                     
                 <button className='botaoLogin'>    
-                    <a href='#' style={{paddingBottom:'8px', fontSize:'25px', paddingRight:'10px',}}>
+                    <a href='/login' style={{paddingBottom:'8px', fontSize:'25px', paddingRight:'10px',}}>
                     <FaUser  style={{color:'WHITE', paddingRight:'10px', fontSize:'30px', paddingTop:'11px',}}/>Login
                 </a>
                 </button>
