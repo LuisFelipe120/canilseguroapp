@@ -4,7 +4,6 @@ import './../CadastroUsuario/style.css'
 import Logo from '../../assets/images/CannilSeguro_Logo.png'
 import React, { useState } from 'react'
 import { initalCanil, useContextGlobal } from '../../context/PostContext'
-import { WrapText } from '@mui/icons-material';
 const CadastroCanil = () => {
     const { canis, addCanil } = useContextGlobal();
     const [previewImage, setPreviewImage] = useState(null);
@@ -19,6 +18,8 @@ const CadastroCanil = () => {
         if (file) {
             reader.readAsDataURL(file);
         }
+
+        
     }
     return (
         <div className='formArea'>
@@ -26,13 +27,12 @@ const CadastroCanil = () => {
                 initialValues={initalCanil}
                 onSubmit={(values, actions) => {
                     const newCanil = {
-                        id: canis[canis.length - 1]?.id ? canis[canis.length - 1]?.id + 1 : 1,
-                        nome: values.nome,
+                        canil: values.canil,
                         email: values.email,
                         endereco: values.endereco,
                         mensagem: values.mensagem,
-                        img: previewImage
-
+                        img: previewImage,
+                        usuarios_id: values.usuarios_id
 
 
                     }
@@ -60,8 +60,11 @@ const CadastroCanil = () => {
                         </div>
 
                         <div className='UserAreaCadastro'>
+                        <div className='InputArea'>
+                                <Field type='number' id='NomeCompletoCanil' name='usuarios_id' className='CadastroGeral' placeholder='Id' />
+                            </div>
                             <div className='InputArea'>
-                                <Field type='text' id='NomeCompletoCanil' name='nome' className='CadastroGeral' placeholder='Nome Completo' />
+                                <Field type='text' id='NomeCompletoCanil' name='canil' className='CadastroGeral' placeholder='Canil nome' />
                             </div>
                         </div>
                         <div className='UserAreaCadastro'>
@@ -79,7 +82,7 @@ const CadastroCanil = () => {
                                     <img src={previewImage} alt='preview' className='imgPreview' />
                                 }
                             </div>
-                            <input className='inputField' id='img' name='img'
+                            <input className='inputField' id='img' name='img' 
                                 type='file' onChange={(e) => {
                                     handleFileChange(e)
 
