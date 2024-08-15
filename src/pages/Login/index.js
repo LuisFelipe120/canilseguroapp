@@ -28,7 +28,7 @@ function Login() {
             </div>
             
             <div className="pagodito">
-            <a href="/" className="senhitaEsquecita">Esqueceu a senha?</a>
+            <a href="CadastroUsuario" className="senhitaEsquecita">Esqueceu a senha?</a>
             </div>
 
             
