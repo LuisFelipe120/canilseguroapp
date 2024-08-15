@@ -18,6 +18,8 @@ const CadastroCanil = () => {
         if (file) {
             reader.readAsDataURL(file);
         }
+
+        
     }
     return (
         <div className='formAreaCadaster'>
@@ -25,14 +27,14 @@ const CadastroCanil = () => {
                 initialValues={initalCanil}
                 onSubmit={(values, actions) => {
                     const newCanil = {
-                        nome: values.nome,
+                        canil: values.canil,
                         email: values.email,
                         endereco: values.endereco,
                         mensagem: values.mensagem,
                         img: previewImage,
                         usuarios_id: values.usuarios_id
- 
- 
+
+
                     }
                     addCanil(newCanil);
                     actions.setValues(
@@ -58,11 +60,11 @@ const CadastroCanil = () => {
                         </div>
  
                         <div className='UserAreaCadastro'>
-                        <div className='InputAreaCadaster'>
-                                <Field type='number' id='NomeCompletoCanil' name='usuarios_id' className='CadastroGeral' placeholder='id' />
+                        <div className='InputArea'>
+                                <Field type='number' id='NomeCompletoCanil' name='usuarios_id' className='CadastroGeral' placeholder='Id' />
                             </div>
-                            <div className='InputAreaCadaster'>
-                                <Field type='text' id='NomeCompletoCanil' name='nome' className='CadastroGeral' placeholder='Nome Completo' />
+                            <div className='InputArea'>
+                                <Field type='text' id='NomeCompletoCanil' name='canil' className='CadastroGeral' placeholder='Canil nome' />
                             </div>
                         </div>
                         <div className='UserAreaCadastro'>
@@ -80,7 +82,7 @@ const CadastroCanil = () => {
                                     <img src={previewImage} alt='preview' className='imgPreview' />
                                 }
                             </div>
-                            <input className='inputField' id='img' name='img'
+                            <input className='inputField' id='img' name='img' 
                                 type='file' onChange={(e) => {
                                     handleFileChange(e)
  

@@ -12,6 +12,8 @@ import CardCanilDetalhes from './pages/CardCanilDetalhes';
 import Sobre from './pages/Sobre';
 import CadastroCanil from './pages/CadastroCanil';
 import Login from './pages/Login';
+import ClientPrivateRoute from './components/Auth/ClientPrivateRoute';
+import Painel from './pages/painel';
 
 
 function App() {
@@ -20,26 +22,26 @@ function App() {
     
    <Routes>
      
-    <Route path='/'element= {
+    <Route exact path='/'element= {
       <Home />
     } >
     </Route>
-    <Route path="/Cardpage" element={
+    <Route exact path="/Cardpage" element={
       <CardPage/>
       }>
             </Route>
 
-      <Route path='/minhaconta' element={
+      <Route exact path='/minhaconta' element={
         <MinhaConta/>
       }>
               </Route>
-              <Route path='/DocPack' element= {
+              <Route exact path='/DocPack' element= {
         <DocPack />
       }>
 
       </Route>
 
-      <Route path='/KennelClub' element= {
+      <Route exact path='/KennelClub' element= {
         <KennelClub />
       }>
 
@@ -51,37 +53,44 @@ function App() {
 
       </Route>
       
-      <Route path='/CardDetalhes' element= {
+      <Route exact path='/CardDetalhes' element= {
         <CardDetalhes />
       }>
         
 
       </Route>
-      <Route path='/CardcanilDetalhes' element= {
+      <Route exact path='/CardcanilDetalhes' element= {
         <CardCanilDetalhes />
       }>
         
 
       </Route>
 
-      <Route path='/CaneCorso' element= {
+      <Route exact path='/CaneCorso' element= {
          <CardCanilDetalhes/>
       } />
-      <Route path='/CadastroUsuario' element={
+      <Route exact path='/CadastroUsuario' element={
         <CadastroUsuario/>
       }></Route>
 
-      <Route path='/sobre' element={
+      <Route exact path='/sobre' element={
         <Sobre/>
         }></Route>
-       <Route path='/CadastroCanil' element={
+       <Route exact path='/CadastroCanil' element={
         <CadastroCanil/>
 
       }></Route>
-       <Route path='/Login' element={
+      <Route exact path='/login' element={
         <Login/>
 
       }></Route>
+          {/* rota privada */}
+          <Route exact path="/painel" element={
+        <ClientPrivateRoute>
+          <Painel />
+        </ClientPrivateRoute>
+        
+      }/>
    </Routes>
   );
 }

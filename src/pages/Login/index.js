@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import './styles.css';
 import Layout from "../../components/Layout";
-import api from "../../service/api";
+import api from "../../services/api";
 import { useContextGlobal } from "../../context/PostContext";
 import { useNavigate } from "react-router-dom";
- 
+
 const Login = () => {
- 
+
     const navigate = useNavigate();
     const [dados, setDados] = useState({
         email: '',
         senha: ''
     })
- 
+  
     const {logado, setLogado} = useContextGlobal()
     const [erroLogin, setErroLogin] = useState(
         false
- 
+
     )
     const handleChange = (e) => {
         setDados({ ...dados, [e.target.name]: e.target.value })
@@ -26,7 +26,7 @@ const Login = () => {
         e.preventDefault();
         api.post('/login', dados).then(data => {
             console.log(data)
-            if (!data.data) {
+            if (!data.data) { 
                 setErroLogin(true)
                 setLogado(false)
                 return
@@ -48,12 +48,10 @@ const Login = () => {
                             <input type="email" name="email" onChange={handleChange} value={dados.email}  placeholder="Digite seu e-mail" className="inputLoginArea" />
                         </label>
                     </div>
- 
                     <div className="textAreaLogin">
                         <label>
                             Senha
                             <input type="password" name="senha" onChange={handleChange} value={dados.senha} placeholder="Digite sua senha" className="InputSenhaLogin" />
- 
                         </label>
                     </div>
                     {erroLogin && <span>usuario e senha invalido</span>}
@@ -64,19 +62,18 @@ const Login = () => {
                 <div className="cadastroLoginArea">
                     <a href="/usuarios">Cadastre-se</a>
                 </div>
- 
                 <div className="pagodito">
                     <a href="#" className="senhitaEsquecita">Esqueceu a senha?</a>
                 </div>
                 </div>
- 
+
                 </form>
- 
+
                
- 
- 
-               
- 
+
+
+                
+
             </div>
         </Layout>
     )
