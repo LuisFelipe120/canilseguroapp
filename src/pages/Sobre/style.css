@@ -1,4 +1,6 @@
-.sobreDiv{
+.header{
+
+    
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -9,9 +11,7 @@
     border: 5px solid #0033A1; 
     width: 400px;
     height: 300px;
-}
-
-.area{
+    margin-left: 1500px;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
