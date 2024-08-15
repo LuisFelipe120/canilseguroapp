@@ -3,6 +3,7 @@ import { Navigate } from 'react-router-dom'
 import { useContextGlobal } from '../../context/PostContext'
 
 const ClientPrivateRoute = ({children}) => {
+
     const {logado} = useContextGlobal()  
     console.log("Valor de logado:", logado);
   return (
@@ -10,4 +11,4 @@ const ClientPrivateRoute = ({children}) => {
   )
 }
 
-export default ClientPrivateRoute   
+export default ClientPrivateRoute

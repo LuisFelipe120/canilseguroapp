@@ -22,12 +22,11 @@ const Login = () => {
         setDados({ ...dados, [e.target.name]: e.target.value })
     }
     console.log(logado)
-
     const handleCadastrar = (e) => {
         e.preventDefault();
         api.post('/login', dados).then(data => {
             console.log(data)
-            if (!data.data) {
+            if (!data.data) { 
                 setErroLogin(true)
                 setLogado(false)
                 return
