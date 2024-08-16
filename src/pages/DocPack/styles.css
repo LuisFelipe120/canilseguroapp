@@ -1,22 +1,19 @@
 .docContent{
-  height: 80vh;
+    
 }
 
-.tist{
-    display: flex;
-    flex-direction: column;
+
+.titleDock {
+    color: #0065a1;
+    font-size: 50px;
+    height: 140px;
     align-items: center;
     justify-content: center;
-   
-}
-.NomeDocArea{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-decoration: underline;
 }
 
-.containerDoc {
+.containerDock {
     padding-left: 50px;
     padding-bottom: 30px;
     padding-top: 60px;
@@ -24,31 +21,12 @@
     color: blue;
 }
 
-.informationArea  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.information{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.information p {
+.informationDock {
     padding-left: 70px;
     font-size: 25px;
 }
-.informationLink{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.mais {
+
+.maisDock {
     padding-left: 50px;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -56,17 +34,19 @@
     color: blue;
 }
 
-.link {
-    font-size: 2px;
-    display: inline-block;
-    width: fit-content;
-    padding-left: 50px;
-    text-decoration: none;
-    color: black;
-    width: 0px;
-    height: 0px;
+
+
+.redirection:hover{
+    color: blue;
 }
 
-.link:hover{
-    color: blue;
+.tist {
+    align-items: center;
+    justify-content: center;
+
+}
+
+.redirection {
+    padding-left: 70px;
+    font-size: 25px;
 }

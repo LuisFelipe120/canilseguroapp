@@ -41,6 +41,7 @@
 
 .ImagemArea img{
     height:250px;
+    border-radius: 15px;
 }
 .criador{
     display: flex;

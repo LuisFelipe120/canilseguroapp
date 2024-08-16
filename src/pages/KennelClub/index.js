@@ -8,8 +8,8 @@ const KennelClub = () => {
   return (
     <Layout>
     <div className='kennelContent'>
-      <section className='tist'>
-        <h1 className='title'>Vai até um kennel Clube</h1>
+      <section className='tistClub'>
+        <h1 className='titleClub'>Vai até um kennel Clube</h1>
         <div className='containerKennel'>O que é um Kennel Clube?</div>
         <p className='information'>O Brasil Kennel Club é a entidade cinófila de maior tradição no território nacional.<br/>
         Fundado em 1922 e situado na Cidade do Rio de Janeiro, tem por finalidade congregar os cinófilos, cuidando dos interesses de todas <br/> 

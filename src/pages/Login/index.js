@@ -48,12 +48,10 @@ const Login = () => {
                             <input type="email" name="email" onChange={handleChange} value={dados.email}  placeholder="Digite seu e-mail" className="inputLoginArea" />
                         </label>
                     </div>
-
                     <div className="textAreaLogin">
                         <label>
                             Senha
                             <input type="password" name="senha" onChange={handleChange} value={dados.senha} placeholder="Digite sua senha" className="InputSenhaLogin" />
-
                         </label>
                     </div>
                     {erroLogin && <span>usuario e senha invalido</span>}
@@ -64,7 +62,6 @@ const Login = () => {
                 <div className="cadastroLoginArea">
                     <a href="/usuarios">Cadastre-se</a>
                 </div>
-
                 <div className="pagodito">
                     <a href="#" className="senhitaEsquecita">Esqueceu a senha?</a>
                 </div>

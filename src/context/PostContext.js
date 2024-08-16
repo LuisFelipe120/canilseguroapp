@@ -22,6 +22,13 @@ const initalCanil={
     img:null,
 
 }
+
+const initialRace = {
+    id: 0,
+    canilEmail: '',
+    nome: '',
+    grupo: ''
+};
  
 const ContextGlobal = createContext(undefined);
 
@@ -79,6 +86,16 @@ const removeUser =(id) =>{
         ]) }
     }
 
+    const removeRace = (id) => {
+        const index = races.findIndex(race => race?.id === id);
+        if (index !== -1) {
+            setRaces([
+                ...races.slice(0, index),
+                ...races.slice(index + 1, races.length)
+            ]);
+        }
+    };
+
  
    
     return <ContextGlobal.Provider value={{users, addUser, canis, addCanil ,removeUser, removeCanil, logado, setLogado }}>
@@ -101,6 +118,7 @@ const useContextGlobal = () => {
 export {
     initialUser,
     initalCanil,
+    initialRace,
     ContextGlobalProvider,
     useContextGlobal,
 }

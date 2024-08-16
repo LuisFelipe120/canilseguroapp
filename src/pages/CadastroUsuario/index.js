@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import { FaUser } from 'react-icons/fa';
 import Logo from '../../assets/images/CannilSeguro_Logo.png';
-
+ 
 import React from 'react'
 import { initialUser, useContextGlobal } from '../../context/PostContext'
 const validateRequired = (value) => {
@@ -25,7 +25,6 @@ const CadastroUsuario = () => {
                 initialValues={initialUser}
                 onSubmit={(values, actions,) => {
                     const newUser = {
-
                         nome: values.nome,
                         email: values.email,
                         senha: values.senha,
@@ -48,15 +47,15 @@ const CadastroUsuario = () => {
                 <div className='LogoArea'>
                             <img  className='imgLogoArea' src={Logo}/>
                         </div>
-
+ 
                     <div className='FormularioArea'>
                         <FaUser style={{ color: '#d6d6d6', paddingRight: '4px' }} />
                         <h3>Preencha esse fomulario</h3>
                     </div>
-
-
+ 
+ 
                     <div className='UserAreaCadastro'>
-                        <div className='InputArea'>
+                        <div className='InputAreaCadaster'>
                             <Field type='text' id='NomeCompleto' name="nome"  className='CadastroGeral' placeholder='Nome Completo' />
                             {errors.nome && touched.nome && <div className="error">{errors.nome}</div>}
                         </div>
@@ -87,26 +86,25 @@ const CadastroUsuario = () => {
                         </div>
                     </div>
                     <div className='UserAreaCadastro'>
-                        <div className='InputArea'>
+                        <div className='InputAreaCadaster'>
                             <Field className='CadastroGeral' id='NumeroCelular' type='number' placeholder='(00) 00000-0000' name="numero" />
                             {errors.numero && touched.numero && <div className="error">{errors.numero}</div>}
                         </div>
                     </div>
                     <div className='BotaoAreaCadastro'>
                     <button className='voltarCadastro' type='button' id='BotaoCadastrar'> <a href='/'>Voltar</a></button>
-
-                        <button className='cadastrar' type='submit' id='BotaoCadastrar'>Cadastrar</button>
+ 
+                        <button className='cadastrarUsuario' type='submit' id='BotaoCadastrar'>Cadastrar</button>
                     </div>
-
-
+ 
+ 
                 </section>
                 </Form>
                  )}
             </Formik>
         </div>
-
+ 
     )
 }
-
+ 
 export default CadastroUsuario
-
