@@ -2,18 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { contextGlobalProvider } from './context/PostContext';
 import { BrowserRouter } from 'react-router-dom';
+import { ContextGlobalProvider } from './context/PostContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <contextGlobalProvider>
+    <ContextGlobalProvider>
       <BrowserRouter>
     <App />
     </BrowserRouter>
 
-    </contextGlobalProvider>
+    </ContextGlobalProvider>
+    
+   
+
     
   </React.StrictMode>
 );

@@ -4,9 +4,11 @@ import Filhote from '../../assets/images/FilhoteCaneCorso.png'
 import Vazio from '../../assets/images/favorite_Vazio.png'
 import User from '../../assets/images/face_scan.png'
 import React from 'react';
+import Layout from '../../components/Layout'
 
 const CardCanilDetalhes = () => {
   return (
+    <Layout>
     <div>
       <section>
           <div className='box'>
@@ -75,6 +77,7 @@ const CardCanilDetalhes = () => {
           </div>
       </section>
     </div>
+    </Layout>
   )
 }
 

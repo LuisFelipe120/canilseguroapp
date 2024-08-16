@@ -18,7 +18,7 @@ const Home = () => {
                 <h1>Tenha um cachorro de Raça</h1>
               </div>
               <div className='subTituloArea'>
-                <h2>Canis com documentação Pdigree afiliados a CBKC</h2>
+                <h2>Canis com documentação Pedigree afiliados a CBKC</h2>
               </div>
               <div className='ImagemArea'>
                 <img src={CachorroBanner}/>

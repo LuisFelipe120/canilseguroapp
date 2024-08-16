@@ -4,10 +4,13 @@ import Footer from '../Footer'
 import './style.css'
 
 const Layout = ({children}) => {
+
   return (
     <div className='content'>
+      
         <Header/>
         <main>
+      
             {children}
         </main>
         <Footer/>

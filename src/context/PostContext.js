@@ -1,27 +1,64 @@
 import { createContext, useContext, useState } from "react"
+import api from "../services/api"
 
-const userInitial = [
-    {id: 1, nome: 'admin', senha: '1234', cpf: '000.000.000-00', numero:'(00) 00000-0000'}
-]
- 
- 
+
 const initialUser = {
     id: 0,
     nome: '',
+    email:'',
     senha: '',
     cpf: '',
     numero: ''
 }
+
+//contextCanil
+
+const initalCanil={
+    id:0,
+    nome:'',
+    email:'',
+    endereco:'',
+    mensagem:'',
+    img:null,
+
+}
  
-const contextGlobal = createContext(undefined);
- 
-const contextGlobalProvider = ({ children }) => {
-    const [users, setUsers] = useState(userInitial);
- 
-    const addUser = (user) => {
-        setUsers([...users, user]);
+const ContextGlobal = createContext(undefined);
+
+
+//contextCanil
+
+const ContextGlobalProvider = ({ children }) => {
+    const [users, setUsers] = useState([]);
+    const [ canis, setCanis] = useState([]);
+
+    const [logado, setLogado] = useState(false);
+
+    const addUser = (users) => {
+        console.log(users)
+        // const formData = new FormData(post);
+        // sem imagem
+        const fetchUser = async () => {await api.post('/usuarios', users)}
+        // const formData = new FormData();
+        // formData.append('user', JSON.stringify(user));
+        // formData.append('file', user.file);
+        // const fetchUser = async() => {await api.('/usuarios', formData)}
+        fetchUser();
+        // setUsers([...users, user]);
     }
 
+    //contextCanil
+        const addCanil = (canil) => {
+             const formData = new FormData();
+        formData.append('canil', JSON.stringify(canil));
+        formData.append('file', canil.file);
+        const fetchCanil = async() => {await api.post('/canis', formData)}
+        fetchCanil()
+        setCanis([...canis, canil]);
+
+        }
+
+ 
 const removeUser =(id) =>{
         const index = users.findIndex(user => user?.id === id);
         if(index !== -1){
@@ -31,22 +68,40 @@ const removeUser =(id) =>{
         ]) }
     }
 
+    //contextCanil
+
+    const removeCanil =(id) =>{
+        const index = canis.findIndex(canil => canil?.id === id);
+        if(index !== -1){
+            setCanis([
+                ...canis.slice(0 ,index),
+                ...canis.slice(index+1, canis.length)
+        ]) }
+    }
+
+ 
    
-    return <contextGlobal.Provider value={{users, addUser, removeUser}}>
+    return <ContextGlobal.Provider value={{users, addUser, canis, addCanil ,removeUser, removeCanil, logado, setLogado }}>
         {children}
-    </contextGlobal.Provider>;
+    </ContextGlobal.Provider>;
 }
+
+
  
 const useContextGlobal = () => {
-    const context = useContext(contextGlobal);
+    const context = useContext(ContextGlobal);
     if(!context) {
         throw new Error('useContextGlobal deve ser usado dentro de um contextGlobal')
     }
     return context;
 }
- 
+
+
+
 export {
     initialUser,
-    contextGlobalProvider,
-    useContextGlobal
+    initalCanil,
+    ContextGlobalProvider,
+    useContextGlobal,
 }
+
