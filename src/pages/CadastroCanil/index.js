@@ -25,14 +25,24 @@ const CadastroCanil = () => {
         <div className='formAreaCadaster'>
             <Formik
                 initialValues={initalCanil}
+                validate={(values) => {
+                    const errors = {};
+                    if (!values.email) {
+                        errors.email = 'O email é obrigatório';
+                    }
+                    // Outras validações, se necessário
+                    return errors;
+                }}
                 onSubmit={(values, actions) => {
+                    console.log(values);
+
                     const newCanil = {
                         canil: values.canil,
                         email: values.email,
                         endereco: values.endereco,
                         mensagem: values.mensagem,
                         img: previewImage,
-                        usuarios_id: values.usuarios_id
+                        Usuarios_id: values.Usuarios_id
 
 
                     }
@@ -61,7 +71,7 @@ const CadastroCanil = () => {
  
                         <div className='UserAreaCadastro'>
                         <div className='InputArea'>
-                                <Field type='number' id='NomeCompletoCanil' name='usuarios_id' className='CadastroGeral' placeholder='Id' />
+                                <Field type='number' id='NomeCompletoCanil' name='Usuarios_id' className='CadastroGeral' placeholder='Id' />
                             </div>
                             <div className='InputArea'>
                                 <Field type='text' id='NomeCompletoCanil' name='canil' className='CadastroGeral' placeholder='Canil nome' />

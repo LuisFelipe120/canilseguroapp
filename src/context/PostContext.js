@@ -15,11 +15,12 @@ const initialUser = {
 
 const initalCanil={
     id:0,
-    nome:'',
+    canil:'',
     email:'',
     endereco:'',
     mensagem:'',
     img:null,
+    Usuarios_id:''
 
 }
 
@@ -38,6 +39,8 @@ const ContextGlobal = createContext(undefined);
 const ContextGlobalProvider = ({ children }) => {
     const [users, setUsers] = useState([]);
     const [ canis, setCanis] = useState([]);
+    const [ races, setRaces] = useState([]);
+
 
     const [logado, setLogado] = useState(false);
 
@@ -98,7 +101,7 @@ const removeUser =(id) =>{
 
  
    
-    return <ContextGlobal.Provider value={{users, addUser, canis, addCanil ,removeUser, removeCanil, logado, setLogado }}>
+    return <ContextGlobal.Provider value={{users, addUser, canis, addCanil ,removeUser, removeCanil, logado, setLogado, races}}>
         {children}
     </ContextGlobal.Provider>;
 }
