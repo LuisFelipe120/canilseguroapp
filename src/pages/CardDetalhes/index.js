@@ -12,17 +12,14 @@ const CardDetalhes = () => {
     <div>
       <section>
           <div className='box'>
-            <h1 className='title'>Canil CollieEsporte</h1>
+            <h1 className='title'></h1>
             <br/>
-            <p className='city'>Presidente Prudente, SP</p>
+            <p className='city'></p>
             <br/>
-            <p className='contact'>CollieEsporte@gmail.com</p>
+            <p className='contact'></p>
             <br/>
-            <a href='www.collieOficial.com.br' className='link'>www.collieOficial.com.br</a>
             <br/>
-            <p className='text'>O Canil Collie Esporte, é um canil de <br/>
-            raça pura Border Collie,afiliado com a <br/>
-            cbkc com dez anos de qualidade.</p>
+            <p className='text'></p>
             <br/>
             <img src={Dog}/>
             <br/>

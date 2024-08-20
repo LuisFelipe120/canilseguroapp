@@ -2,11 +2,18 @@ import React from 'react'
 import './style.css'
 import Layout from '../../components/Layout'
 import Avaliacao from '../../components/Avaliacao'
+import { useCanisList } from '../../components/TarefasList/hook'
  
-const CardPage = () => {
+
+export const CardPage = () => {
+    const {canis, isLoading, handleClickDetails} = useCanisList();
+    if(isLoading) {
+        return <div> carregando... </div>
+    }
   return (
     <div>
       <Layout>
+
         <div className='bordaArea'>
         <section className='CardArea'>
  
