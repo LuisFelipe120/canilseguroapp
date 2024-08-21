@@ -1,71 +1,58 @@
-import './style.css'
-import Dog from '../../assets/images/Dog.png'
-import dog from '../../assets/images/Dogin.png'
-import Vazio from '../../assets/images/favorite_Vazio.png'
+import './style.css';
 import React from 'react';
-import Avaliacao from '../../components/Avaliacao'
+import Avaliacao from '../../components/Avaliacao';
 import Layout from '../../components/Layout';
+import { getCanil } from '../requests/show';
+import { useQuery } from 'react-query';
+import { useParams } from 'react-router-dom';
 
 const CardDetalhes = () => {
+  const { id } = useParams();
+  const { data: canis, isLoading } = useQuery(['getCanil', { id }], getCanil, {
+    enabled: !!id,
+  });
+
+  if (isLoading) {
+    return <div>Carregando...</div>;
+  }
+
   return (
     <Layout>
-    <div>
-      <section>
-          <div className='box'>
-            <h1 className='title'></h1>
-            <br/>
-            <p className='city'></p>
-            <br/>
-            <p className='contact'></p>
-            <br/>
-            <br/>
-            <p className='text'></p>
-            <br/>
-            <img src={Dog}/>
-            <br/>
-            <img src={dog}/>
-            <br/>
-            <div className='inb'>
-
-                <div className='box1'>
-                  <p>Favoritos</p>
-                </div>
-                
-                <div className='box2'>
-                  <img src={Vazio}></img>
-                </div>
- 
+      <div className="card-detalhes">
+        <section className="canil-info">
+          <h2>{canis?.canil}</h2>
+          <p>{canis?.endereco}</p>
+          <p>{canis?.email}</p>
+          <p>{canis?.mensagem}</p>
+          {canis?.img && (
+            <div className="canil-image">
+              <img src={canis?.img} alt={`Imagem de ${canis?.canil}`} />
             </div>
-            <br/>
-            <div className='geralAvali'>
-              <p className='avali'>Avaliações Geral</p>
-              <br/>
-              <div className='starGeral'>
-                <Avaliacao/>
-              </div>
-            </div>
+          )}
+          <p className="avaliacao-canil">Avaliação: {canis?.Avaliacao_Canil}</p>
+        </section>
 
-            <div id='bord'>
-              <div className='bord'>
-                <p className='canil'>Avaliar este Canil</p>
-                <br />
-                <div className='starGeralLast'>
-                  <Avaliacao/>
-                </div>
-              </div>
-              <div className='confirm'>
-                <input id type="text" className='userInput' placeholder='Escrever Texto...'/>
-                <br/>
-                <button className='botao'>Confirmar</button>
-              </div>
-              <br/>
+        <section id="bord" className="avaliacao-section">
+          <div className="bord">
+            <h3 className="canil">Avaliar este Canil</h3>
+            <div className="starGeralLast">
+              <Avaliacao />
             </div>
-
           </div>
-      </section>
-    </div>
+          <div className="confirm">
+            <form method='post'>
+            <input
+              type="text"
+              className="userInput"
+              placeholder="Escrever Texto..."
+            />
+            <button className="botao" type='submit'>Confirmar</button>
+            </form>
+          </div>
+        </section>
+      </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default CardDetalhes
+export default CardDetalhes;

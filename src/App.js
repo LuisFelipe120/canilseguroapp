@@ -8,7 +8,6 @@ import CadastrarRacas from './pages/CadastrarRacas';
 import MinhaConta from './pages/MinhaConta';
 import KennelClub from './pages/KennelClub';
 import CardDetalhes from './pages/CardDetalhes';
-import CardCanilDetalhes from './pages/CardCanilDetalhes';
 import Sobre from './pages/Sobre';
 import CadastroCanil from './pages/CadastroCanil';
 import Login from './pages/Login';
@@ -53,22 +52,14 @@ function App() {
 
       </Route>
       
-      <Route exact path='/CardDetalhes' element= {
+      <Route exact path='/canis/:id' element= {
         <CardDetalhes />
       }>
         
 
       </Route>
-      <Route exact path='/CardcanilDetalhes' element= {
-        <CardCanilDetalhes />
-      }>
-        
 
-      </Route>
-
-      <Route exact path='/CaneCorso' element= {
-         <CardCanilDetalhes/>
-      } />
+    
       <Route exact path='/CadastroUsuario' element={
         <CadastroUsuario/>
       }></Route>

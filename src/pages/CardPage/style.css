@@ -1,57 +1,42 @@
-.bordaArea {
+.InformacoesAreaCard {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centraliza o conteúdo */
     align-items: center;
-    flex-direction: column;
-
-}
-.bordaArea a{
-    text-decoration: none;
-}
-
-.CardArea {
-    width: 70%;
-    border: solid 2px #d7d7d7;
-    border-radius: 10px;
-    margin: 10px;
-
-}
-
-.InformacoesArea {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.TituloCanil h1 {
-    color: #0065a1;
-    font-size: 35;
-    font-weight: 600;
-    padding: 40px;
-}
-
-.InformacaoCanil {
-    color: #0033A1;
-    font-size: 18;
-    font-weight: 200;
-    padding: 5px;
-}
-
-.textoAreaCanil p {
-    font-size: 25px;
-    font-weight: 400px;
+    padding: 20px;
+  }
+  
+  .InformacoesAreaCard ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Faz o ul ocupar a largura total */
+    max-width: 600px; /* Limita a largura para manter os cards compactos */
+  }
+  
+  .InformacoesAreaCard li {
+    background-color: #f9f9f9;
     padding: 15px;
-}
-
-.TituloAvaliacao {
-    color: #0065a1;
-    font-size: 35;
-    font-weight: 600;
-    padding: 10px;
-}
-
-.ComponenteAvaliacaoArea {
-    height: 40px;
-    padding: 15px;
-}
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Borda arredondada */
+    text-align: center; /* Centraliza o texto */
+    color: #4A90E2; /* Azul leve para o texto */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra ao card */
+  }
+  
+  .InformacoesAreaCard li img {
+    width: 100%;
+    max-width: 200px; /* Limita a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Espaço abaixo da imagem */
+    border-radius: 10px; /* Bordas arredondadas para a imagem também */
+  }
+  
+  .InformacoesAreaCard li span {
+    display: block; /* Garante que cada span ocupe uma linha */
+    margin-bottom: 5px; /* Espaço entre os spans */
+  }
+  
+  .InformacoesAreaCard li span:last-child {
+    margin-bottom: 0; /* Remove o espaço do último span */
+  }

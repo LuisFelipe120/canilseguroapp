@@ -1,4 +1,4 @@
-import api from "../services/api"
+import api from "../../services/api"
 
 export const getCanis = async () => {
     return api.get('/canis').then(res => res.data)
