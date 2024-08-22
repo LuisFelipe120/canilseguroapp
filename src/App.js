@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import DocPack from './pages/DocPack';
 import Home from './pages/Home';
-import CardPage from './pages/CardPage';
 import CadastroUsuario from './pages/CadastroUsuario';
 import CadastrarRacas from './pages/CadastrarRacas';
 import MinhaConta from './pages/MinhaConta';
@@ -13,6 +12,7 @@ import CadastroCanil from './pages/CadastroCanil';
 import Login from './pages/Login';
 import ClientPrivateRoute from './components/Auth/ClientPrivateRoute';
 import Painel from './pages/painel';
+import CardPage from './pages/CardPage';
 
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
       <Home />
     } >
     </Route>
-    <Route exact path="/Cardpage" element={
+    <Route exact path="/CardPage" element={
       <CardPage/>
       }>
             </Route>
@@ -53,7 +53,11 @@ function App() {
       </Route>
       
       <Route exact path='/canis/:id' element= {
+                // <ClientPrivateRoute>
+
         <CardDetalhes />
+        // </ClientPrivateRoute>
+
       }>
         
 

@@ -5,8 +5,8 @@ import { useCanisList } from '../../components/TarefasList/hook'
 
 
 export const CardPage = () => {
-  const { canis, isLoading, handleClickDetails } = useCanisList();
-  if (isLoading) {
+  const { canis, canisLoading, handleClickDetails } = useCanisList();
+  if (canisLoading  ) {
     return <div> carregando... </div>
   }
 

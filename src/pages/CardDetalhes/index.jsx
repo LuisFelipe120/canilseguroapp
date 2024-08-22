@@ -2,18 +2,33 @@ import './style.css';
 import React from 'react';
 import Avaliacao from '../../components/Avaliacao';
 import Layout from '../../components/Layout';
-import { getCanil } from '../requests/show';
+import { getCanil, getComentarios } from '../requests/show';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 
 const CardDetalhes = () => {
   const { id } = useParams();
-  const { data: canis, isLoading } = useQuery(['getCanil', { id }], getCanil, {
+  const { data: canis, isLoading: canisLoading } = useQuery(['getCanil', id], () => getCanil(id), {
     enabled: !!id,
   });
 
-  if (isLoading) {
+  // Consulta para buscar os comentários
+  const { data: comentarios, isLoading: comentariosLoading } = useQuery(
+    ['getComentarios', id],
+    () => getComentarios(id),
+    {
+      enabled: !!id,
+    }
+  );
+
+  // Verifica se os dados estão carregando
+  if (canisLoading || comentariosLoading) {
     return <div>Carregando...</div>;
+  }
+
+  // Verifica se o canil foi encontrado
+  if (!canis) {
+    return <div>Canil não encontrado.</div>;
   }
 
   return (
@@ -48,6 +63,19 @@ const CardDetalhes = () => {
             />
             <button className="botao" type='submit'>Confirmar</button>
             </form>
+          </div>
+          <div className="comentarios">
+            {comentarios?.length > 0 ? (
+              comentarios.map((comentario) => (
+                <div key={comentario.id} className="comentario">
+                  <p><strong>Usuário:</strong> {comentario.usuarios_id}</p>
+                  <p><strong>Avaliação:</strong> {comentario.Avaliacao_Usuario}</p>
+                  <p><strong>Comentário:</strong> {comentario.comentarios}</p>
+                </div>
+              ))
+            ) : (
+              <p>Nenhum comentário encontrado.</p>
+            )}
           </div>
         </section>
       </div>
