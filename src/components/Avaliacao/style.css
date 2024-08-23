@@ -1,0 +1,13 @@
+.avaliacao {
+    display: flex;
+  }
+  
+  .estrela {
+    font-size: 24px;
+    color: lightgray;
+    margin-right: 4px;
+  }
+  
+  .estrela.checked {
+    color: gold;
+  }

@@ -4,8 +4,16 @@ import Logo from './../../assets/images/CannilSeguro_Logo.png'
 import Pesquisar from '../Pesquisar'
 import { FaUser } from 'react-icons/fa';
 import NavBar from '../NavBar';
+import { useContextGlobal } from '../../context/PostContext';
 
 const Header = () => {
+    const { searchcontext, setSearchContext} = useContextGlobal();
+
+    const handleSearchChange = (e) => {
+      setSearchContext(e.target.value);
+    };
+    
+  
   return (
     <div className='conteudo'>
             <div className='logoConteiner'>
@@ -16,7 +24,12 @@ const Header = () => {
             </div>
 
             <div className='cidade' >
-                <Pesquisar/>
+            <input
+        type="text"
+        placeholder="Pesquisar por endereço"
+        value={searchcontext}
+        onChange={handleSearchChange}
+      />
             </div>
            
             <div className='login' >

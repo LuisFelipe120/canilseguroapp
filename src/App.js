@@ -31,7 +31,11 @@ function App() {
             </Route>
 
       <Route exact path='/minhaconta' element={
+                        // <ClientPrivateRoute>
+
         <MinhaConta/>
+                // </ClientPrivateRoute>
+
       }>
               </Route>
               <Route exact path='/DocPack' element= {

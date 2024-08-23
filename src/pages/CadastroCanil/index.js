@@ -42,8 +42,6 @@ const CadastroCanil = () => {
                         endereco: values.endereco,
                         mensagem: values.mensagem,
                         img: previewImage,
-                        Usuarios_id: values.Usuarios_id
-
 
                     }
                     addCanil(newCanil);
@@ -70,9 +68,6 @@ const CadastroCanil = () => {
                         </div>
  
                         <div className='UserAreaCadastro'>
-                        <div className='InputArea'>
-                                <Field type='number' id='NomeCompletoCanil' name='Usuarios_id' className='CadastroGeral' placeholder='Id' />
-                            </div>
                             <div className='InputArea'>
                                 <Field type='text' id='NomeCompletoCanil' name='canil' className='CadastroGeral' placeholder='Canil nome' />
                             </div>

@@ -40,6 +40,7 @@ const ContextGlobalProvider = ({ children }) => {
     const [users, setUsers] = useState([]);
     const [ canis, setCanis] = useState([]);
     const [ races, setRaces] = useState([]);
+    const [ searchcontext, setSearchContext] = useState('');
 
 
     const [logado, setLogado] = useState(false);
@@ -101,7 +102,7 @@ const removeUser =(id) =>{
 
  
    
-    return <ContextGlobal.Provider value={{users, addUser, canis, addCanil ,removeUser, removeCanil, logado, setLogado, races}}>
+    return <ContextGlobal.Provider value={{users, addUser, canis, addCanil ,removeUser, removeCanil, logado, setLogado, races, searchcontext, setSearchContext}}>
         {children}
     </ContextGlobal.Provider>;
 }

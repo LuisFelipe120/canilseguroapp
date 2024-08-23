@@ -6,9 +6,10 @@ const Pesquisar = () => {
   return (
   <div className='pesquisarLayout'>
     <div className='iconPesquisar'>
+      
       <FaSearch/>
      </div>
-      <input  className='search' type="text" placeholder="Pesquise sua cidade" />
+      <input className='search' type="text" placeholder="Pesquise sua cidade" />
    
   </div>
   )
