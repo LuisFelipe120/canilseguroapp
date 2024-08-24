@@ -13,10 +13,15 @@ export const CardPage = () => {
   if (canisLoading  ) {
     return <div> carregando... </div>
   }
+
   const normalizedSearchTerm = (searchcontext || '').toLowerCase();
-    const filteredCanis = canis.filter((canil) =>
-      canil.endereco.toLowerCase().includes(searchcontext.toLowerCase())
-    );
+
+
+  const filteredCanis = Array.isArray(canis)
+    ? canis.filter((canil) =>
+        canil.endereco.toLowerCase().includes(normalizedSearchTerm)
+      )
+    : [];
   
   return (
     <Layout>

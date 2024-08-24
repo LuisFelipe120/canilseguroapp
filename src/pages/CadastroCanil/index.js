@@ -6,21 +6,27 @@ import React, { useState } from 'react'
 import { initalCanil, useContextGlobal } from '../../context/PostContext'
 const CadastroCanil = () => {
     const { canis, addCanil } = useContextGlobal();
-    const [previewImage, setPreviewImage] = useState(null);
+    const [previewImages, setPreviewImages] = useState([]);
     const [fileKey, setFileKey] = useState(0);
     console.log(canis)
     const handleFileChange = (e) => {
-        const file = e.target.files && e.target.files[0];
-        const reader = new FileReader();
-        reader.onloadend = () => {
-            setPreviewImage(reader.result);
-        };
-        if (file) {
-            reader.readAsDataURL(file);
-        }
+        const files = e.target.files;
+        const fileArray = Array.from(files);
+        const filePreviews = [];
 
-        
-    }
+        fileArray.forEach((file) => {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                filePreviews.push(reader.result);
+                if (filePreviews.length === fileArray.length) {
+                    setPreviewImages(filePreviews);
+                }
+            };
+            reader.readAsDataURL(file);
+        });
+    };
+
+
     return (
         <div className='formAreaCadaster'>
             <Formik
@@ -41,32 +47,31 @@ const CadastroCanil = () => {
                         email: values.email,
                         endereco: values.endereco,
                         mensagem: values.mensagem,
-                        img: previewImage,
+                        img: previewImages,
 
                     }
                     addCanil(newCanil);
                     actions.setValues(
                         initalCanil
                     )
-                    setPreviewImage(null)
-                    setFileKey(fileKey + 1)
- 
+                    setPreviewImages([]);
+                    setFileKey(fileKey + 1);
                 }}
             >
                 <Form>
                     <section className='CadastroArea'>
- 
- 
- 
+
+
+
                         <div className='LogoArea'>
                             <img className='imgLogoArea' src={Logo} />
                         </div>
- 
+
                         <div className='FormularioArea'>
                             <FaUser style={{ color: '#d6d6d6', paddingRight: '4px' }} />
                             <h3>Preencha esse fomulario para cadastrar o canil</h3>
                         </div>
- 
+
                         <div className='UserAreaCadastro'>
                             <div className='InputArea'>
                                 <Field type='text' id='NomeCompletoCanil' name='canil' className='CadastroGeral' placeholder='Canil nome' />
@@ -83,38 +88,39 @@ const CadastroCanil = () => {
                         <div className='UserAreaCadastro'>
                             <label className='InformacaoesLabel'>Imagens do canil</label>
                             <div className='imgAreaCanil'>
-                                {previewImage &&
-                                    <img src={previewImage} alt='preview' className='imgPreview' />
-                                }
+                                {previewImages.map((image, index) => (
+                                    <img key={index} src={image} alt='preview' className='imgPreview' />
+                                ))}
                             </div>
-                            <input className='inputField' id='img' name='img' 
-                                type='file' onChange={(e) => {
-                                    handleFileChange(e)
- 
-                                }}
-                                key={fileKey}
- 
+                            <input
+                                className='inputField'
+                                id='img'
+                                name='img'
+                                type='file'
+                                onChange={handleFileChange}
+                                multiple
+                                key={fileKey} // Garante que o input seja reinicializado quando fileKey mudar
                             />
                         </div>
                         <div className='UserAreaCadastro'>
                             <label className='InformacaoesLabel'>Mensagem Sobre o Canil</label>
                             <div className='InputAreaCadaster'>
-                                <Field  className='mensagemArea' as="textarea" id='MensagemCanil' name='mensagem' type='text' size={50} max-lenght={50}  placeholder='Digite sua mensagem'></Field>
+                                <Field className='mensagemArea' as="textarea" id='MensagemCanil' name='mensagem' type='text' size={50} max-lenght={50} placeholder='Digite sua mensagem'></Field>
                             </div>
                         </div>
                         <div className='BotaoAreaCadastroCanil'>
                             <button className='voltarCadastro' type='button' id='BotaoCadastrar'> <a href='/'>Voltar</a></button>
- 
+
                             <button className='cadastrarUsuario' type='submit' id='BotaoCadastrar'>Cadastrar</button>
                         </div>
- 
- 
+
+
                     </section>
                 </Form>
             </Formik>
         </div>
- 
+
     )
 }
- 
+
 export default CadastroCanil

@@ -59,17 +59,36 @@ const ContextGlobalProvider = ({ children }) => {
     }
 
     //contextCanil
-        const addCanil = (canil) => {
-             const formData = new FormData();
+    const addCanil = (canil, files) => {
+        const formData = new FormData();
+    
+        // Adiciona os dados do canil ao FormData
         formData.append('canil', JSON.stringify(canil));
-        formData.append('file', canil.file);
-        const fetchCanil = async() => {await api.post('/canis', formData)}
-        fetchCanil()
+    
+        // Adiciona múltiplos arquivos ao FormData
+        files.forEach((file) => {
+            formData.append('img', file); // 'img' deve corresponder ao nome no multer
+        });
+    
+        // Envia os dados para o servidor
+        const fetchCanil = async () => {
+            try {
+                await api.post('/canis', formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                });
+            } catch (error) {
+                console.error('Erro ao enviar canil:', error);
+            }
+        };
+    
+        fetchCanil();
+    
+        // Atualiza o estado local (opcional, se necessário)
         setCanis([...canis, canil]);
 
-        }
-
- 
+    }
 const removeUser =(id) =>{
         const index = users.findIndex(user => user?.id === id);
         if(index !== -1){
