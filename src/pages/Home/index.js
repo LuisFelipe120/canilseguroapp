@@ -6,14 +6,30 @@ import CriadorBanner from './../../assets/images/mulher-adotando-caes-escolha-di
 
 import React from 'react'
 import '../Sobre'
+import { useContextGlobal } from '../../context/PostContext';
 
 const Home = () => {
+  const { toggle, searchcontext, setSearchContext } = useContextGlobal();
   return (
     <div>
      <Layout>
       <div className='homeArea'>
         <a href='/Cardpage'>
         <section className='tenhaCanil'>
+        {toggle && (
+                    <div className='pesquisaContainer'>
+                        <input
+                            type="text"
+                            placeholder="Pesquisar por endereço"
+                            value={searchcontext}
+                            onChange={(e) => setSearchContext(e.target.value)}
+                        />
+                        <div className='menuDropdown'>
+                            {/* Conteúdo do menu */}
+                           
+                        </div>
+                    </div>
+                )}
               <div className='tituloArea'>
                 <h1>Tenha um cachorro de Raça</h1>
               </div>

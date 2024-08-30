@@ -53,3 +53,37 @@
 .homeArea a{
     text-decoration: none;
 }
+.homeArea {
+    position: relative;
+}
+
+.pesquisaContainer {
+    position: relative;
+    margin-top: 20px; /* Adapte conforme necessário */
+}
+
+.pesquisaContainer input {
+    width: 100%;
+    padding: 10px;
+}
+
+.menuDropdown {
+    position: absolute;
+    top: 100%; /* Coloca o menu diretamente abaixo do campo de pesquisa */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    width: 100%;
+}
+
+.menuDropdown p {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menuDropdown p:hover {
+    background-color: #f0f0f0;
+}

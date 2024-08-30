@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './style.css'
 import Logo from './../../assets/images/CannilSeguro_Logo.png'
 import Pesquisar from '../Pesquisar'
@@ -7,13 +7,13 @@ import NavBar from '../NavBar';
 import { useContextGlobal } from '../../context/PostContext';
 
 const Header = () => {
-    const { searchcontext, setSearchContext} = useContextGlobal();
+    const { searchcontext, setSearchContext, toggleMenu} = useContextGlobal();
 
     const handleSearchChange = (e) => {
       setSearchContext(e.target.value);
     };
     
-  
+
   return (
     <div className='conteudo'>
             <div className='logoConteiner'>
@@ -29,8 +29,10 @@ const Header = () => {
         placeholder="Pesquisar por endereço"
         value={searchcontext}
         onChange={handleSearchChange}
+        onClick={toggleMenu}
       />
             </div>
+        
            
             <div className='login' >
             

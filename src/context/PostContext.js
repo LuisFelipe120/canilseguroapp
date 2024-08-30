@@ -13,15 +13,15 @@ const initialUser = {
 
 //contextCanil
 
-const initalCanil={
+const initialCanil={
     id:0,
     canil:'',
     email:'',
     endereco:'',
     mensagem:'',
     img:null,
-    Usuarios_id:''
-
+    Usuarios_id:'',
+    Avaliacao_Canil:''
 }
 
 const initialRace = {
@@ -40,6 +40,14 @@ const ContextGlobalProvider = ({ children }) => {
     const [users, setUsers] = useState([]);
     const [ canis, setCanis] = useState([]);
     const [ races, setRaces] = useState([]);
+    const [toggle, setToggle] = useState(false)
+
+
+    const toggleMenu = () => {
+        setToggle(prev => !prev);
+    };
+
+
     const [ searchcontext, setSearchContext] = useState('');
 
 
@@ -59,35 +67,14 @@ const ContextGlobalProvider = ({ children }) => {
     }
 
     //contextCanil
-    const addCanil = (canil, files) => {
-        const formData = new FormData();
+    const addCanil = (canil) => {
     
-        // Adiciona os dados do canil ao FormData
+         const formData = new FormData();
         formData.append('canil', JSON.stringify(canil));
-    
-        // Adiciona múltiplos arquivos ao FormData
-        files.forEach((file) => {
-            formData.append('img', file); // 'img' deve corresponder ao nome no multer
-        });
-    
-        // Envia os dados para o servidor
-        const fetchCanil = async () => {
-            try {
-                await api.post('/canis', formData, {
-                    headers: {
-                        'Content-Type': 'multipart/form-data'
-                    }
-                });
-            } catch (error) {
-                console.error('Erro ao enviar canil:', error);
-            }
-        };
-    
+        formData.append('file', canil.file);
+        const fetchCanil = async() => {await api.post('/canis', formData)}
         fetchCanil();
-    
-        // Atualiza o estado local (opcional, se necessário)
         setCanis([...canis, canil]);
-
     }
 const removeUser =(id) =>{
         const index = users.findIndex(user => user?.id === id);
@@ -121,7 +108,7 @@ const removeUser =(id) =>{
 
  
    
-    return <ContextGlobal.Provider value={{users, addUser, canis, addCanil ,removeUser, removeCanil, logado, setLogado, races, searchcontext, setSearchContext}}>
+    return <ContextGlobal.Provider value={{users, addUser, canis, addCanil ,removeUser, removeCanil, logado, setLogado, races, searchcontext, setSearchContext, toggle, setToggle, toggleMenu}}>
         {children}
     </ContextGlobal.Provider>;
 }
@@ -140,7 +127,7 @@ const useContextGlobal = () => {
 
 export {
     initialUser,
-    initalCanil,
+    initialCanil,
     initialRace,
     ContextGlobalProvider,
     useContextGlobal,
