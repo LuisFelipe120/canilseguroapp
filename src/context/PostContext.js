@@ -20,15 +20,16 @@ const initialCanil={
     endereco:'',
     mensagem:'',
     img:null,
-    Usuarios_id:'',
+    Usuarios_id:8,
     Avaliacao_Canil:''
 }
 
 const initialRace = {
     id: 0,
-    canilEmail: '',
+    Racas_Classe_id: '',
     nome: '',
-    grupo: ''
+    porte: '',
+    
 };
  
 const ContextGlobal = createContext(undefined);
@@ -76,6 +77,15 @@ const ContextGlobalProvider = ({ children }) => {
         fetchCanil();
         setCanis([...canis, canil]);
     }
+
+//adiciona uma raca
+const addRaces = (races) => {
+
+    const fetchRace = async () => {await api.post('/racas', races)}
+   
+    fetchRace();
+}
+
 const removeUser =(id) =>{
         const index = users.findIndex(user => user?.id === id);
         if(index !== -1){
@@ -108,7 +118,7 @@ const removeUser =(id) =>{
 
  
    
-    return <ContextGlobal.Provider value={{users, addUser, canis, addCanil ,removeUser, removeCanil, logado, setLogado, races, searchcontext, setSearchContext, toggle, setToggle, toggleMenu}}>
+    return <ContextGlobal.Provider value={{users, addUser, canis, addCanil ,removeUser, removeCanil, logado, setLogado, races, addRaces,searchcontext, setSearchContext, toggle, setToggle, toggleMenu}}>
         {children}
     </ContextGlobal.Provider>;
 }

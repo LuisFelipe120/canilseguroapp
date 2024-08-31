@@ -15,11 +15,9 @@ const CadastrarRacas = () => {
                 initialValues={initialRace}
                 onSubmit={(values, actions) => {
                     const newRaces = {
- 
-                        id: Date.now(), // Gerar um ID único com base no timestamp
-                        canilEmail: values.canilEmail,
+                        Racas_Classe_id: values.Racas_Classe_id,
                         nome: values.nome,
-                        grupo: values.grupo
+                        porte: values.porte,
                     }
                     addRaces(newRaces);
                     actions.setValues(
@@ -38,23 +36,22 @@ const CadastrarRacas = () => {
                         <h3>Preencha esse fomulario</h3>
                     </div>
  
- 
-                    <div className='UserAreaCadastro'>
-                        <div className='InputAreaCadaster'>
-                            <Field className='CadastroGeral' id='CadastroEmail' name="email" type='text' placeholder='E-mail' />
-                        </div>
-                    </div>
                     <div className='UserAreaCadastro'>
                             <div className='InputAreaCadaster'>
-                                <Field type='text' id='NomeRaca' name="nome" className='CadastroGeral' placeholder='Nome da Raça' />
+                                <Field type='text' id='nome' name="nome" className='CadastroGeral' placeholder='Nome da Raça' />
                             </div>
                     </div>
                     <div className='UserAreaCadastro'>
+                            <div className='InputAreaCadaster'>
+                                <Field type='text' id='porte' name="porte" className='CadastroGeral' placeholder='Porte' />
+                            </div>
+                            </div>
+                    <div className='UserAreaCadastro'>
                         <div className='InputAreaCadaster'>
-                            <Field as='select' id='Grupo' name='grupo' className='CadastroGeral'>
+                            <Field as='select' id='Grupo' name='Racas_Classe_id' className='CadastroGeral'>
                                 <option value='' label='Selecione o Grupo' />
-                                <option value='Grupo A' label='Grupo A' />
-                                <option value='Grupo B' label='Grupo B' />
+                                <option value='1' label='Pastoreio' />
+                                <option value='2' label='Splitz e cao de caça' />
                             </Field>
                         </div>
                     </div>

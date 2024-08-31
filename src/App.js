@@ -50,7 +50,7 @@ function App() {
 
       </Route>
 
-      <Route path='/CadastrarRacas' element= {
+      <Route path='/racas' element= {
         <CadastrarRacas />
       }>
 

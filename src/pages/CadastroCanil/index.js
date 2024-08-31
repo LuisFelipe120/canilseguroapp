@@ -29,12 +29,12 @@ const CadastroCanil = () => {
                 onSubmit={(values, actions) => {
                     const newCanil = {
                         canil: values.canil,
-                        email: 'luis@gmail,com',
+                        email: values.email,
                         endereco: values.endereco,
                         mensagem: values.mensagem,
                         img:previewImage,
                         file: fileField,
-                        usuarios_id: 12,
+                        Usuarios_id: 3,
                         Avaliacao_Canil:0
                     }
                     addCanil(newCanil);
