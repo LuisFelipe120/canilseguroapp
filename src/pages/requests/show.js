@@ -15,3 +15,14 @@ export const getComentarios = async ({ queryKey }) => {
         throw new Error("ID não fornecido para obter comentários.");
     }
     return api.get(`/comentarios/${id}`).then(res => res.data);}
+
+    export const getRacas = async ({queryKey}) => {
+        const [, { id }] = queryKey
+        return api.get(`/racas/${id}`).then(res => res.data)
+    }
+    
+    export const getClasses = async ({queryKey}) => {
+        const [, { id }] = queryKey
+        return api.get(`/classes/${id}`).then(res => res.data)
+    }
+    

@@ -34,7 +34,7 @@ const CadastroCanil = () => {
                         mensagem: values.mensagem,
                         img:previewImage,
                         file: fileField,
-                        Usuarios_id: 3,
+                        usuarios_id: 2,
                         Avaliacao_Canil:0
                     }
                     addCanil(newCanil);
