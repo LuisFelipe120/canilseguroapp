@@ -20,14 +20,14 @@ const initialCanil={
     endereco:'',
     mensagem:'',
     img:null,
-    Usuarios_id:8,
+    Usuarios_id:2,
     Avaliacao_Canil:''
 }
 
 const initialRace = {
-   canil_id:'',
-   Racas_Classes_Tipos_Id:'',
-   Racas_id:''
+    canil_id:'',
+    Racas_Racas_Classe_id:'',
+    Racas_id:''
 };
  
 const ContextGlobal = createContext(undefined);
@@ -78,7 +78,7 @@ const ContextGlobalProvider = ({ children }) => {
 
     const addRace = (races) => {
         console.log(races)
-        const fetchRace = async () => {await api.post('//canil_racas', races)}
+        const fetchRace = async () => {await api.post('/canil_racas', races)}
         fetchRace();
     }
 

@@ -16,13 +16,11 @@ export const getComentarios = async ({ queryKey }) => {
     }
     return api.get(`/comentarios/${id}`).then(res => res.data);}
 
-    export const getRacas = async ({queryKey}) => {
-        const [, { id }] = queryKey
-        return api.get(`/racas/${id}`).then(res => res.data)
+    export const getRacas = async () => {
+        return api.get('/racas').then(res => res.data)
     }
     
-    export const getClasses = async ({queryKey}) => {
-        const [, { id }] = queryKey
-        return api.get(`/classes/${id}`).then(res => res.data)
+    export const getClasses = async () => {
+        return api.get('/classes').then(res => res.data)
     }
     

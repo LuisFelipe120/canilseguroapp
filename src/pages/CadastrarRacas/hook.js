@@ -8,13 +8,8 @@ export const useRacasList = () => {
     const { data: classes } = useQuery(
         ['getClasses', ] , getClasses)
 
-
-  
-
-    
-
     return {
         racas,
-        classes,        
+        classes,       
     }
 }

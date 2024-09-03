@@ -1,168 +1,127 @@
-.CadastroArea{
-    height: 100vh;
-    width: 50vw;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-}
-.LogoArea{
+/* Estilo Geral */
+.formAreaCadasterRacas {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding-bottom: 20px;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    padding: 20px;
+    box-sizing: border-box;
 }
- 
-.imgAreaCanil{
-    padding: 10px;
-}
-.imgPreview{
-    border: solid 2px;
-    border-radius: 5px;
-}
- 
- 
-.imgLogoArea{
-    height:140px;
-}
- 
-.FormularioArea{
-    height: 20px;
+
+/* Container do Formulário */
+.CadastroAreaRacas {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     width: 100%;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    max-width: 500px;
 }
-.FormularioArea h3{
-    font-size: 25px;
-    font-weight: 400px;
-    color: #0033A1;
+
+/* Logo Area */
+.LogoAreaRacas {
+    text-align: center;
+    margin-bottom: 20px;
 }
- 
- 
-.UserAreaCadastro{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+.imgLogoAreaRacas {
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Formulário Area */
+.FormularioAreaRacas {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.userIconRacas {
+    color: #6c757d;
+    font-size: 1.5rem;
+}
+
+.FormularioAreaRacas h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+/* Área dos Inputs */
+.InputContainerRacas {
+    margin-bottom: 20px;
+}
+
+.InputAreaRacas {
+    margin-bottom: 15px;
+}
+
+.InputAreaRacas label {
+    display: block;
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 8px;
+}
+
+.CadastroGeralRacas {
+    width: 100%;
     padding: 10px;
-}
-.CadastroGeral{
-    border: solid 2px ;
+    border: 1px solid #ced4da;
     border-radius: 4px;
-    font-size: 15px;
-    font-weight: 200;
-    padding-left: 5px;
-    font-weight: 500;
-    color: #7d7d7d;
-    height: 40px;
-    width: 300px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.InputAreaCadaster{
-    height: 50px;
-    padding: 10px;
+
+/* Estilo dos Selects */
+.CadastroGeralRacas:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
 }
- 
-.BotaoCadastrar{
-   
-    width: 150px;
-    height: 50px;
-    font-size: 15px;
-    background-color: #fff;
-    border: solid 2px #0065a1;
-    border-radius: 5px;
-    color: #0065a1;
-    font-size: 20px;
-}
- 
-.CadastroGeral:hover{
-    border-radius:4px;
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    -webkit-box-shadow: 0px 0px 15px 1px #0065a1;
-    -moz-box-shadow: 0px 0px 15px 1px #0065a1;
-    box-shadow: 0px 0px 5px 0px #0065a1;
-    border:1px solid #0065a1;
-    outline:none;
- 
-}
-.mensagemArea:hover{
-    border-radius:4px;
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    -webkit-box-shadow: 0px 0px 15px 1px #0065a1;
-    -moz-box-shadow: 0px 0px 15px 1px #0065a1;
-    box-shadow: 0px 0px 5px 0px #0065a1;
-    border:1px solid #0065a1;
-    outline:none;
- 
-}
- 
-.BotaoAreaCadastro{
-    width: 60%;
+
+/* Botões */
+.BotaoAreaCadastroRacas {
     display: flex;
-    justify-content: space-around;
-    padding-top: 20px;
-    padding-left: 80px;
-    padding-right: 80px;
+    justify-content: space-between;
+    gap: 10px;
 }
-.voltarCadastro a{
-    color: #0065a1;
+
+.voltarCadastroRacas, .cadastrarUsuarioRacas {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.voltarCadastroRacas {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+.voltarCadastroRacas:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.cadastrarUsuarioRacas {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.cadastrarUsuarioRacas:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.cadastrarUsuarioRacas a {
+    color: white;
     text-decoration: none;
 }
- 
-.imgPreview{
-    height: 200px;
-    width: 200px;
-}
-.BotaoAreaCadastroCanil{
-    width: 60%;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 200px;
-    padding-left: 80px;
-    padding-right: 80px;
-}
- 
- 
-.voltarCadastro{
-    width: 100px;
-    height: 50px;
-    font-size: 15px;
-    background-color: #fff;
-    border: solid 2px #0065a1;
-    border-radius: 5px;
-    color: #0065a1;
-    font-size: 20px;
-}
-.cadastrarUsuario{
-    width: 100px;
-    height: 50px;
-    font-size: 15px;
-    background-color: #fff;
-    border: solid 2px #0065a1;
-    border-radius: 5px;
-    color: #0065a1;
-    font-size: 20px;
-}
-.BotaoCanil{
-    width: 240px;
-    display: flex;
-}
- 
-.mensagemArea{
- 
-    border: solid 2px;
-    font-size: 15px;
-    width: 280px;
-    height: 200px;
-    font-weight: 200;
-    padding-left: 5px;
-    font-weight: 500;
-    resize: none;
+
+.cadastrarUsuarioRacas a:hover {
+    text-decoration: underline;
 }
