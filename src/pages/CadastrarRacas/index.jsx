@@ -1,7 +1,7 @@
 import { Field, Form, Formik } from 'formik'
 import { FaUser } from 'react-icons/fa';
 import Logo from '../../assets/images/CannilSeguro_Logo.png';
-import React from 'react'
+import React, { useState } from 'react'
 import { initialRace, useContextGlobal } from '../../context/PostContext'
 import { useRacasList } from './hook';
 import { useCanisList } from '../CardPage/hook';
@@ -15,6 +15,7 @@ const CadastrarRacas = () => {
             <Formik
                 initialValues={initialRace}
                 onSubmit={(values, actions) => {
+                    
                     console.log(values)
                     const newRaces = {
                         canil_id: values.canil_id,
@@ -46,7 +47,7 @@ const CadastrarRacas = () => {
                                 <Field as='select' id='canil_id' name='canil_id' className='CadastroGeral'>
                                     <option value="">Selecione o canil</option>
                                     {canis.map(canil => (
-                                        <option key={canil.id} value={canil.id}>
+                                        <option  key={canil.id} value={canil.id}>
                                             {canil?.canil}
                                         </option>
                                     ))}
@@ -54,10 +55,10 @@ const CadastrarRacas = () => {
                             </div>
                         </div>
                          <div className='InputAreaCadaster'>
-                            <Field as='select' id='Racas_Racas_Classe_id' name='Racas_Racas_Classe_id' className='CadastroGeral'>
+                            <Field as='select' id='Racas_Racas_Classe_id' name='Racas_Racas_Classe_id' className='CadastroGeral'  >
                             <option value="">Selecione o grupo</option>
                                     {classes.map(classes => (
-                                        <option key={classes.id} value={classes.id}>
+                                        <option   key={classes.id} value={classes.id}>
                                             {classes?.descricao}
                                         </option>
                                     ))}
@@ -65,10 +66,10 @@ const CadastrarRacas = () => {
                         </div>
                         <div className='UserAreaCadastro'>
                             <div className='InputAreaCadaster'>
-                                <Field as='select' id='Racas_id' name='Racas_id' className='CadastroGeral'>
+                                <Field as='select' id='Racas_id' name='Racas_id' className='CadastroGeral' >
                                 <option value="">Selecione a raca</option>
                                     {racas.map(racas => (
-                                        <option key={racas.id} value={racas.id}>
+                                        <option   key={racas.id} value={racas.id}>
                                             {racas?.nome} - {racas?.porte}
                                         </option>
                                        
